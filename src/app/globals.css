@@ -1,26 +1,117 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@import "tw-animate-css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@custom-variant dark (&:is(.dark *));
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+
+
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --radius: 0.5rem;
+  --background: black;
+  --foreground: white;
+  --card: #0a0a0a;
+  --card-foreground: white;
+  --popover: #0a0a0a;
+  --popover-foreground: white;
+  --primary: hsl(345, 100%, 60%);
+  --primary-foreground: white;
+  --secondary: hsl(345, 100%, 45%);
+  --secondary-foreground: white;
+  --muted: hsl(0, 0%, 15%);
+  --muted-foreground: hsl(0, 0%, 80%);
+  --accent: hsl(345, 100%, 50%);
+  --accent-foreground: white;
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --border: hsl(0, 0%, 20%);
+  --input: hsl(0, 0%, 20%);
+  --ring: hsl(345, 100%, 60%);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Components */
+button {
+  @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors
+  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2
+  disabled:opacity-50 disabled:pointer-events-none ring-offset-background
+  bg-gradient-to-r from-pinkish-red to-pinkish-red-light text-white hover:opacity-90 px-6 py-3;
 }
+.link-hover {
+  @apply relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-pinkish-red 
+  after:transition-all after:duration-300 hover:after:w-full;
+}
+.button-secondary {
+  @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors
+  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2
+  disabled:opacity-50 disabled:pointer-events-none ring-offset-background
+  bg-white/10 text-white hover:bg-white/20 px-6 py-3;
+}
+
+.glass-card {
+  @apply bg-background/60 backdrop-blur-md border border-accent/20 rounded-2xl shadow-lg;
+}
+
+.section-container {
+  @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24;
+}
+
+/* Animations */
+.hover-scale {
+  @apply transition-transform duration-300 hover:scale-105;
+}
+
+.section-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-accent/40 rounded-full hover:bg-accent/60 transition-colors;
+}
+
+/* Dark mode enforcement */
+:root {
+  color-scheme: dark;
+}
+
