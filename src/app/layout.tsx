@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   keywords: ["AI solutions", "digital marketing", "CRM development", "web development", "mobile app development"],
   openGraph: {
     type: "website",
-    url: "https://vortexsolution.com/",
+    url: "https://vortexsolution.io/",
     title: "Vortex Solution | Virtual Operation For Reliable Tech Excellence",
     description: "Transform your business with our AI-driven digital marketing and development solutions.",
     images: [{ url: "/lovable-uploads/New Project (22).png" }],
@@ -50,6 +50,8 @@ export default function RootLayout({
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:image" content="/lovable-uploads/New Project (22).png" />
+        <link rel="icon" type="image/png" href="/lovable-uploads/New Project (22).png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
