@@ -1,8 +1,17 @@
 import { toast } from "@/hooks/use-toast";
 
+interface FormData {
+  name: string;
+  email: string;
+  subject?: string;
+  message: string;
+  phone?: string;
+  service?: string;
+}
+
 interface FormSubmitOptions {
   formType: 'contact' | 'quote';
-  data: Record<string, any>;
+  data: FormData;
   onSuccess?: () => void;
   onError?: () => void;
 }
