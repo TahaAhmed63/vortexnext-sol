@@ -51,7 +51,7 @@ const PricingPackage = ({
             {title}
           </h3>
           <div className="flex items-baseline justify-center gap-1">
-            <span className="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r from-blue-600 via-blue-400 to-purple-500 bg-clip-text text-transparent">
+            <span className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-blue-600 via-blue-400 to-purple-500 bg-clip-text text-transparent">
               {price}
             </span>
             {period && (
