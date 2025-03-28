@@ -1,16 +1,14 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-    darkMode: ["class"],
-    content: [
-        "./src/app/**/*.{js,ts,jsx,tsx}",
-        "./src/pages/**/*.{js,ts,jsx,tsx}",
-        "./src/components/**/*.{js,ts,jsx,tsx}",
-        
-        // Or if using `src` directory:
-        "./src/**/*.{js,ts,jsx,tsx}",
-        ],
-        
-    theme: {
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+	darkMode: "class",
+	content: [
+		"./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+		"./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+		"./src/**/*.{js,ts,jsx,tsx,mdx}",
+	],
+	theme: {
 		container: {
 			center: true,
 			padding: '2rem',
@@ -18,7 +16,7 @@ module.exports = {
 				'2xl': '1400px'
 			}
 		},
-        extend: {
+		extend: {
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -53,37 +51,38 @@ module.exports = {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				},
-				// Theme colors
+				white: '#FFFFFF',
 				'black': '#000000',
 				'dark-black': '#121212',
-				'pinkish-red': '#FF3366',
-				'pinkish-red-light': '#FF6699',
-				'pinkish-red-dark': '#CC2952',
+				'pinkish-red': '#0066FF',
+				'pinkish-red-light': '#B366FF',
+				'pinkish-red-dark': '#0066FF',
 				'pure-white': '#FFFFFF',
 				'off-white': '#F5F5F5',
 				'light-gray': '#E0E0E0',
 				'dark-gray': '#333333',
-				'midnight-blue': '#090909', // Changed to near-black
+				'midnight-blue': '#090909',
 				'jet-black': '#000000',
-				'electric-blue': '#FF3366', // Changed to pinkish-red
-				'neon-purple': '#FF3366', // Changed to pinkish-red
-				'cool-gray': '#E0E0E0', // Changed to light gray
-				"gold": '#FFFFFF', // Changed to white
-				'gold-dark': '#F5F5F5', // Changed to off-white
+				'electric-blue': '#0066FF',
+				'electric-blue-light': '#3399FF',
+				'electric-blue-dark': '#004DCC',
+				'neon-purple': '#9933FF',
+				'neon-purple-light': '#B366FF',
+				'neon-purple-dark': '#7A1ACC',
+				'cool-gray': '#666666',
+				gold: '#FFFFFF',
+				'gold-dark': '#F5F5F5',
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-				display: ['SF Pro Display', 'Inter', 'sans-serif'],
+				sans: ['Poppins', 'sans-serif'],
+				display: ['SF Pro Display', 'Poppins', 'sans-serif'],
+			},
+			letterSpacing: {
+				tight: '-0.025em',
+				normal: '0',
+				wide: '0.025em',
+				wider: '0.05em',
+				widest: '0.1em',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -161,10 +160,12 @@ module.exports = {
 				'400': '400ms',
 			},
 			boxShadow: {
-				'neon-blue': '0 0 15px rgba(255, 51, 102, 0.5)', // Updated to pinkish-red
-				'neon-purple': '0 0 15px rgba(255, 51, 102, 0.5)', // Updated to pinkish-red
+				'neon-blue': '0 0 15px rgba(255, 51, 102, 0.5)',
+				'neon-purple': '0 0 15px rgba(255, 51, 102, 0.5)',
 			},
-		},
-    },
-    plugins: ["tailwindcss-animate"],
-  };
+		}
+	},
+	plugins: [require("tailwindcss-animate")],
+}
+
+export default config;

@@ -2,13 +2,13 @@
   "compilerOptions": {
     "jsx": "preserve", // Ensures JSX is handled by Next.js correctly
     "target": "ESNext", // Supports latest JavaScript features
-    "module": "ESNext",
+    "module": "Node16",
     "lib": [
       "DOM",
       "DOM.Iterable",
       "ESNext"
     ],
-    "moduleResolution": "Node",
+    "moduleResolution": "Node16",
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false, // Enables all strict type checks for better safety

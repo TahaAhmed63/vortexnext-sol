@@ -1,7 +1,7 @@
-"use client"
-import React from 'react';
+'use client';
 
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -14,10 +14,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold font-display bg-clip-text text-transparent bg-gradient-to-r from-electric-blue to-neon-purple">
-              Vortex Solution
-            </h3>
-            <p className="text-gray-300 text-sm leading-relaxed">
+            <Link href="/" className="inline-block mb-2">
+              <img 
+                src="/lovable-uploads/New Project (22).png" 
+                alt="Vortex Solution Logo" 
+                className="h-[80px]"
+              />
+            </Link>
+            <p className="text-gray-600 text-sm leading-relaxed">
               Empowering businesses with cutting-edge AI-driven solutions, innovative digital marketing strategies, and world-class development services.
             </p>
             <div className="flex space-x-4">
@@ -42,13 +46,13 @@ const Footer = () => {
             <ul className="space-y-2">
               {['Services', 'Case Studies', 'About Us', 'Careers', 'Contact'].map((item) => (
                 <li key={item}>
-                  <a 
+                  <Link 
                     href={`#${item.toLowerCase().replace(' ', '-')}`}
-                    className="text-gray-300 hover:text-white transition-colors flex items-center"
+                    className="text-gray-600 hover:text-white transition-colors flex items-center"
                   >
                     <ArrowRight className="h-3 w-3 mr-2" />
                     {item}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -60,15 +64,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-blue-400 mr-3 mt-0.5" />
-                <span className="text-gray-300">123 Innovation Ave, Tech City, TC 10010</span>
+                <span className="text-gray-600">123 Innovation Ave, Tech City, TC 10010</span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-blue-400 mr-3" />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
+                <span className="text-gray-600">+1 (555) 123-4567</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-blue-400 mr-3" />
-                <span className="text-gray-300">info@vortexsolution.com</span>
+                <span className="text-gray-600">info@vortexsolution.com</span>
               </li>
             </ul>
           </div>
@@ -76,17 +80,17 @@ const Footer = () => {
           {/* Newsletter */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Stay Updated</h4>
-            <p className="text-gray-300 text-sm mb-4">
+            <p className="text-gray-600 text-sm mb-4">
               Subscribe to our newsletter for the latest industry insights and company news.
             </p>
             <div className="flex flex-col space-y-3">
               <Input
                 type="email"
                 placeholder="Your email address"
-                className="bg-gray-800 border-gray-700 text-gray-300 placeholder:text-gray-500 focus:border-blue-500"
+                className="bg-white border-gray-700 text-gray-600 placeholder:text-gray-500 focus:border-blue-500"
               />
               <Button
-                className="to-neon-purple  bg-gradient-to-r from-electric-blue to-neon-purple hover:opacity-90 text-white font-medium rounded-md px-4 py-2 transition-all duration-300"
+                className="bg-gradient-to-r from-pinkish-red to-pinkish-red-light hover:opacity-90 text-white font-medium rounded-md px-6 py-2.5 transition-all duration-300 shadow-md hover:shadow-pinkish-red/30"
               >
                 Subscribe
               </Button>
@@ -101,15 +105,15 @@ const Footer = () => {
               © {currentYear} Vortex Solution. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+              </Link>
+              <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Terms of Service
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+              </Link>
+              <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Sitemap
-              </a>
+              </Link>
             </div>
           </div>
         </div>

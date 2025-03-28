@@ -1,4 +1,4 @@
-"use client"
+
 import React, { useRef, useState } from 'react';
 import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -72,7 +72,7 @@ const CaseStudiesSection = () => {
   };
 
   return (
-    <section id="case-studies" className="py-20 bg-black relative">
+    <section id="case-studies" className="py-20  relative">
       {/* Background decorations */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
@@ -84,8 +84,8 @@ const CaseStudiesSection = () => {
           <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-pinkish-red/10 border border-pinkish-red/30 mb-4">
             <span className="text-sm font-medium text-pinkish-red">Success Stories</span>
           </div>
-          <h2 className="section-title text-gradient">
-            Our Work Speaks For Itself
+          <h2 className="mt-3 text-3xl md:text-4xl font-bold text-dark-gray">
+            Our Work  <span className='text-pinkish-red'> Speaks For Itself</span>
           </h2>
           <p className="section-subtitle">
             Explore how we've helped businesses achieve remarkable results with our custom solutions
@@ -113,7 +113,7 @@ const CaseStudiesSection = () => {
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute bottom-4 left-4">
-                        <Badge className="bg-pinkish-red hover:bg-pinkish-red/90 text-white">
+                        <Badge className="bg-pinkish-red hover:bg-pinkish-red/90 ">
                           {study.category}
                         </Badge>
                       </div>
@@ -121,14 +121,14 @@ const CaseStudiesSection = () => {
                     
                     {/* Content Side */}
                     <div className="p-6 lg:p-10 flex flex-col">
-                      <div className="mb-2 text-sm text-gray-400">Client: {study.client}</div>
-                      <h3 className="text-2xl font-bold text-white mb-4">{study.title}</h3>
-                      <p className="text-gray-300 mb-6 flex-grow">{study.description}</p>
+                      <div className="mb-2 text-sm text-gray-600">Client: {study.client}</div>
+                      <h3 className="text-2xl font-bold  mb-4">{study.title}</h3>
+                      <p className="text-gray-600 mb-6 flex-grow">{study.description}</p>
                       
                       <div className="grid grid-cols-3 gap-4 mb-6">
                         {study.results.map((result, index) => (
-                          <div key={index} className="text-center p-3 bg-black/70 rounded-lg border border-pinkish-red/20">
-                            <p className="text-gray-400 text-xs">{result.label}</p>
+                          <div key={index} className="text-center p-3 bg-pinkish-red/30 rounded-lg border border-pinkish-red/20">
+                            <p className="text-gray-600 text-xs">{result.label}</p>
                             <p className="text-pinkish-red font-bold text-xl">{result.value}</p>
                           </div>
                         ))}
@@ -172,7 +172,7 @@ const CaseStudiesSection = () => {
                 <ArrowLeft className="h-5 w-5" />
               </Button>
               <Button
-                variant="outline"
+                variant="default"
                 size="icon"
                 onClick={nextSlide}
                 className="rounded-full h-10 w-10"

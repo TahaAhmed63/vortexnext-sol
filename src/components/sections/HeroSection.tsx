@@ -1,5 +1,4 @@
 
-"use client"
 import React, { useEffect, useRef } from 'react';
 import { ChevronRight, ArrowRight, Star, Sparkles } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -21,7 +20,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center py-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center py-20 mt-10 overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-96 h-96 bg-pinkish-red/30 rounded-full blur-[100px] opacity-20"></div>
@@ -42,8 +41,8 @@ const HeroSection = () => {
               Transform Your <span className="text-gradient">Digital</span> Experience
             </h1>
             
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0">
-              Leverage the power of AI-driven technologies to accelerate growth, enhance customer experience, and streamline operations.
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0">
+              Discover innovative solutions in digital marketing and software development to enhance your business operations.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
@@ -65,7 +64,7 @@ const HeroSection = () => {
               </Button>
             </div>
             
-            <div className="flex items-center justify-center lg:justify-start space-x-8 pt-4">
+            {/* <div className="flex items-center justify-center lg:justify-start space-x-8 pt-4">
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4].map((i) => (
                   <div key={i} className="w-10 h-10 rounded-full border-2 border-black overflow-hidden">
@@ -83,11 +82,11 @@ const HeroSection = () => {
                     <Star key={i} className="w-4 h-4 text-pinkish-red fill-pinkish-red" />
                   ))}
                 </div>
-                <span className="ml-2 text-sm text-gray-300">
+                <span className="ml-2 text-sm text-gray-600">
                   <span className="font-bold">4.9/5</span> from 200+ reviews
                 </span>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Hero image */}
@@ -99,7 +98,7 @@ const HeroSection = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-pinkish-red/50 to-pinkish-red-light/50 rounded-2xl blur opacity-20"></div>
               <div className="relative glass-card p-1 rounded-2xl overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1470&q=80" 
+                  src="/lovable-uploads/photo-1581091226825-a6a2a5aee158.avif" 
                   alt="AI-Driven Solutions" 
                   className="w-full h-auto rounded-xl"
                 />
@@ -108,15 +107,15 @@ const HeroSection = () => {
                 <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-[90%] bg-black/80 backdrop-blur-xl rounded-xl p-4 border border-pinkish-red/30">
                   <div className="grid grid-cols-3 gap-4">
                     <div className="text-center">
-                      <p className="text-gray-400 text-xs">Growth</p>
+                      <p className="text-gray-600 text-xs">Growth</p>
                       <p className="text-pinkish-red font-bold text-xl">+147%</p>
                     </div>
                     <div className="text-center border-x border-pinkish-red/20">
-                      <p className="text-gray-400 text-xs">Projects</p>
+                      <p className="text-gray-600 text-xs">Projects</p>
                       <p className="text-white font-bold text-xl">250+</p>
                     </div>
                     <div className="text-center">
-                      <p className="text-gray-400 text-xs">Retention</p>
+                      <p className="text-gray-600 text-xs">Retention</p>
                       <p className="text-pinkish-red font-bold text-xl">98%</p>
                     </div>
                   </div>
@@ -130,7 +129,7 @@ const HeroSection = () => {
                     </div>
                     <div>
                       <p className="text-white font-medium text-sm">AI Powered</p>
-                      <p className="text-gray-400 text-xs">Next-gen solutions</p>
+                      <p className="text-gray-600 text-xs">Next-gen solutions</p>
                     </div>
                   </div>
                 </div>
@@ -142,7 +141,7 @@ const HeroSection = () => {
                     </div>
                     <div>
                       <p className="text-white font-medium text-sm">Premium Quality</p>
-                      <p className="text-gray-400 text-xs">Industry leading</p>
+                      <p className="text-gray-600 text-xs">Industry leading</p>
                     </div>
                   </div>
                 </div>

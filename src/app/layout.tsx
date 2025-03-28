@@ -1,4 +1,4 @@
-"use-client"
+"use client"
 import type React from "react"
 import "./globals.css"
 import { Inter, Poppins } from "next/font/google"
@@ -25,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
-      <body>{children}</body>
+      <body className="min-h-screen bg-white antialiased">{children}</body>
     </html>
   )
 }
