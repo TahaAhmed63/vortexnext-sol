@@ -1,16 +1,15 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import { ArrowRight, Brain, TrendingUp, Server, Smartphone } from 'lucide-react';
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
+import { Brain, Server } from 'lucide-react';
+import Image from "next/image";
 import ServicePageLayout from '@/components/layout/ServicePageLayout';
 
 import PricingPackage, { PricingFeature } from '@/components/services/PricingPackage';
 import ServiceFeature from '@/components/services/ServiceFeature';
 import Testimonial from '@/components/services/Testimonial';
 import QuoteFormSection from '@/components/sections/QuoteFormSection';
-import { Bot, Code, Lightbulb, Clock, ChartBar, CheckCircle } from 'lucide-react';
+import { Bot, Code, ChartBar, CheckCircle } from 'lucide-react';
 
 export default function AiDrivenSolution() {
     useEffect(() => {
@@ -269,10 +268,12 @@ export default function AiDrivenSolution() {
                             </div>
                             
                             <div>
-                                <img 
+                                <Image 
                                     src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" 
                                     alt="AI Development Process" 
-                                    className="rounded-lg w-full h-full object-cover"
+                                    width={500}
+                                    height={300}
+                                    priority
                                 />
                             </div>
                         </div>
