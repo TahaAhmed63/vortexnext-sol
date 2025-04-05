@@ -160,15 +160,20 @@ const VideoAnimation = () => {
               <div className="w-full md:w-1/2">
                 <div className="aspect-video /50 rounded-xl overflow-hidden border border-pinkish-red/30 relative">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-pinkish-red/80 flex items-center justify-center cursor-pointer hover:bg-pinkish-red transition-colors">
-                      <Video className="w-7 h-7 text-gray-600" />
-                    </div>
+                    <video 
+                      className="w-full h-full object-cover"
+                      src="/lovable-uploads/video2.mp4"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                    />
                   </div>
                 </div>
               </div>
               
               <div className="w-full md:w-1/2">
-                <h3 className="text-2xl font-semibold mb-3 text-gray-600">60-Second Explainer Video</h3>
+                <h3 className="text-2xl font-semibold mb-3 text-white">60-Second Explainer Video</h3>
                 <p className="text-gray-600 mb-4">
                   A professionally crafted animated video that clearly explains your product or service to your target audience.
                 </p>
@@ -224,7 +229,7 @@ const VideoAnimation = () => {
             {process.map((step, index) => (
               <div key={index} className="glass-card p-6">
                 <div className="flex items-center mb-4">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-pinkish-red text-gray-600 font-bold mr-4">
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-pinkish-red text-white font-bold mr-4">
                     {index + 1}
                   </div>
                   <h3 className="text-xl font-semibold text-gray-600">{step.title}</h3>
@@ -237,7 +242,7 @@ const VideoAnimation = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section className="py-20  relative section-fade-in">
+      {/* <section className="py-20  relative section-fade-in">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
@@ -288,7 +293,7 @@ const VideoAnimation = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <QuoteFormSection />
     </ServicePageLayout>
   );
