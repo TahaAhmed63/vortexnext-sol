@@ -232,7 +232,7 @@ const WebsiteMaintenance = () => {
             <div className="relative">
               <div className="relative rounded-xl overflow-hidden shadow-2xl border border-pinkish-red/20">
                 <img 
-                  src="/lovable-uploads/03_23_2025_X-Design (3) (1).png" 
+                  src="/lovable-uploads/webposter.jpg" 
                   alt="Website Maintenance" 
                   className="w-full h-auto"
                 />
