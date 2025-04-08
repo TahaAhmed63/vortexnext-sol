@@ -11,6 +11,8 @@ interface ServicePageLayoutProps {
   description: string;
   heroImage?: string;
   serviceImages?: string[];
+  metaKeywords?: string; // Added for meta keywords
+  metaTitle?: string; // Added for meta title
 }
 
 const ServicePageLayout = ({ 
@@ -19,11 +21,13 @@ const ServicePageLayout = ({
   description, 
   heroImage,
   serviceImages = [
-    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1500&q=80",
-    "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1500&q=80",
-    "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1500&q=80",
-    "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&w=1500&q=80"
-  ]
+    "/lovable-uploads/photo-1558346490-a72e53ae2d4f.avif",
+    "/lovable-uploads/photo-1460925895917-afdab827c52f.avif",
+    "/lovable-uploads/photo-1486312338219-ce68d2c6f44d.avif",
+    "/lovable-uploads/photo-1581091226825-a6a2a5aee158 (1).avif"
+  ],
+  metaKeywords,
+  metaTitle
 }: ServicePageLayoutProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -36,6 +40,19 @@ const ServicePageLayout = ({
 
     return () => clearInterval(interval);
   }, [serviceImages.length]);
+
+  // Set meta tags if provided
+  useEffect(() => {
+    if (metaTitle) {
+      document.title = metaTitle;
+    }
+    if (metaKeywords) {
+      const meta = document.createElement('meta');
+      meta.name = "keywords";
+      meta.content = metaKeywords;
+      document.head.appendChild(meta);
+    }
+  }, [metaTitle, metaKeywords]);
 
   return (
     <div className="min-h-screen flex flex-col">

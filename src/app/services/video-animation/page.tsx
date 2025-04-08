@@ -43,78 +43,80 @@ const VideoAnimation = () => {
     {
       icon: <FileText className="w-7 h-7" />,
       title: "Scriptwriting",
-      description: "Professional scriptwriting that effectively communicates your message in a clear and engaging manner."
+      description: "Expert scriptwriting services that effectively communicate your message in a clear and engaging manner, ensuring your animated video captivates your audience."
     },
     {
       icon: <PenTool className="w-7 h-7" />,
       title: "Storyboarding",
-      description: "Detailed visual planning to map out every scene of your animation before production begins."
+      description: "Comprehensive storyboarding to visually plan every scene of your animation, enhancing the storytelling process before production begins."
     },
     {
       icon: <Palette className="w-7 h-7" />,
       title: "Custom Animation",
-      description: "Bespoke animations created to match your brand style and effectively convey your message."
+      description: "Tailored animations designed to align with your brand style, effectively conveying your message and enhancing viewer engagement."
     },
     {
       icon: <Mic className="w-7 h-7" />,
       title: "Professional Voiceover",
-      description: "High-quality narration from experienced voice actors to enhance your video's impact."
+      description: "High-quality voiceover services from experienced voice actors, adding depth and professionalism to your animated video."
     },
     {
       icon: <Play className="w-7 h-7" />,
       title: "Background Music",
-      description: "Carefully selected music and sound effects to complement your animation and evoke the right emotions."
+      description: "Carefully curated background music and sound effects that complement your animation, evoking the right emotions and enhancing viewer experience."
     },
     {
       icon: <Edit className="w-7 h-7" />,
       title: "Revisions",
-      description: "Two rounds of revisions included to ensure the final product perfectly meets your expectations."
+      description: "Two rounds of revisions included to ensure the final animated product meets your expectations and effectively communicates your message."
     }
   ];
 
   const process = [
     {
       title: "Discovery & Briefing",
-      description: "We begin by understanding your business, target audience, and goals for the video animation."
+      description: "We start by understanding your business, target audience, and specific goals for the video animation project."
     },
     {
       title: "Script Development",
-      description: "Our copywriters create a compelling script that effectively communicates your message."
+      description: "Our skilled copywriters create a compelling script that effectively communicates your message and resonates with your audience."
     },
     {
       title: "Storyboarding",
-      description: "We create a visual plan for your animation, mapping out each scene and transition."
+      description: "We develop a detailed visual plan for your animation, mapping out each scene and transition to ensure a smooth production process."
     },
     {
       title: "Style Development",
-      description: "Our designers craft the visual style for your animation, aligned with your brand identity."
+      description: "Our talented designers craft a unique visual style for your animation, ensuring it aligns with your brand identity and appeals to your audience."
     },
     {
       title: "Animation Production",
-      description: "Our animators bring the storyboard to life with dynamic and engaging movements."
+      description: "Our expert animators bring the storyboard to life with dynamic and engaging movements, creating a captivating animated video."
     },
     {
       title: "Voiceover & Sound",
-      description: "Professional narration and sound design are added to enhance your message."
+      description: "We add professional narration and sound design to enhance your message and create a memorable viewing experience."
     },
     {
       title: "Review & Revisions",
-      description: "You review the animation and provide feedback for up to two rounds of revisions."
+      description: "You will review the animation and provide feedback, allowing for up to two rounds of revisions to perfect the final product."
     },
     {
       title: "Final Delivery",
-      description: "Once approved, we deliver your animation in the required formats for your intended platforms."
+      description: "Once approved, we deliver your animation in the required formats, optimized for your intended platforms and audience."
     }
   ];
 
   return (
     <ServicePageLayout
       title="Video Animation Services"
-      description="Engage your audience with professional explainer videos and animations."
+      description="Engage your audience with professional explainer videos and animations that effectively communicate your message."
+      metaKeywords="video animation, explainer videos, professional animation services, custom animation, voiceover services"
+      metaTitle="Professional Video Animation Services | Engage Your Audience"
       heroImage="https://images.unsplash.com/photo-1574717024453-354a08aab7c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     >
       {/* Features Section */}
-      <section className="py-20  relative">
+      <section className="py-20 relative">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-pinkish-red/10 rounded-full blur-[100px] opacity-20"></div>
@@ -125,7 +127,7 @@ const VideoAnimation = () => {
               Our Video Animation Services
             </h2>
             <p className="text-lg text-gray-600">
-              Bring your ideas to life with engaging and informative animated videos
+              Bring your ideas to life with engaging and informative animated videos that captivate your audience.
             </p>
           </div>
 
@@ -136,7 +138,6 @@ const VideoAnimation = () => {
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}
-                // image={index < 2 ? `https://images.unsplash.com/photo-${index === 0 ? '1551244072-237a26d3e658' : '1580136895875-4227dfd03166'}?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80` : undefined}
               />
             ))}
           </div>
@@ -151,7 +152,7 @@ const VideoAnimation = () => {
               Explainer Video Package
             </h2>
             <p className="text-lg text-gray-600">
-              Professional 60-second animated video to explain your product or service
+              Professional 60-second animated video to explain your product or service effectively.
             </p>
           </div>
 
@@ -175,37 +176,37 @@ const VideoAnimation = () => {
               <div className="w-full md:w-1/2">
                 <h3 className="text-2xl font-semibold mb-3 text-white">60-Second Explainer Video</h3>
                 <p className="text-gray-600 mb-4">
-                  A professionally crafted animated video that clearly explains your product or service to your target audience.
+                  A professionally crafted animated video that clearly explains your product or service to your target audience, enhancing engagement and conversion.
                 </p>
                 
                 <div className="space-y-3 mb-6">
                   <div className="flex items-start">
                     <Play className="w-5 h-5 text-pinkish-red mr-2 mt-1" />
-                    <span className="text-gray-600">Custom script and storyboard</span>
+                    <span className="text-gray-600">Custom script and storyboard tailored to your needs</span>
                   </div>
                   <div className="flex items-start">
                     <Play className="w-5 h-5 text-pinkish-red mr-2 mt-1" />
-                    <span className="text-gray-600">Professional voiceover</span>
+                    <span className="text-gray-600">Professional voiceover to enhance your message</span>
                   </div>
                   <div className="flex items-start">
                     <Play className="w-5 h-5 text-pinkish-red mr-2 mt-1" />
-                    <span className="text-gray-600">Music and sound effects</span>
+                    <span className="text-gray-600">Music and sound effects that elevate the viewing experience</span>
                   </div>
                   <div className="flex items-start">
                     <Play className="w-5 h-5 text-pinkish-red mr-2 mt-1" />
-                    <span className="text-gray-600">Two rounds of revisions</span>
+                    <span className="text-gray-600">Two rounds of revisions to ensure satisfaction</span>
                   </div>
                 </div>
                 
                 <div className="mb-6">
                   <div className="text-3xl font-bold text-gradient">$1,200 USD</div>
-                  <div className="text-gray-400 text-sm">One-time payment</div>
+                  <div className="text-gray-400 text-sm">One-time payment for a high-quality animated video</div>
                 </div>
                 
                 <Button 
                   onClick={() => document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  Request a Quote
+                  Request a Quote for Your Video Animation
                 </Button>
               </div>
             </div>
@@ -214,14 +215,14 @@ const VideoAnimation = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20  relative section-fade-in">
+      <section className="py-20 relative section-fade-in">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
               Our Animation Process
             </h2>
             <p className="text-lg text-gray-600">
-              A structured approach to creating effective animated videos
+              A structured approach to creating effective animated videos that resonate with your audience.
             </p>
           </div>
 
@@ -241,59 +242,6 @@ const VideoAnimation = () => {
         </div>
       </section>
 
-      {/* Portfolio Section */}
-      {/* <section className="py-20  relative section-fade-in">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-              Animation Portfolio
-            </h2>
-            <p className="text-lg text-gray-600">
-              Examples of our video animation work
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="glass-card overflow-hidden">
-              <div className="relative aspect-video">
-                <img 
-                  src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" 
-                  alt="Product Explainer Animation" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 /50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-gray-600 text-xl font-medium">Product Explainer</span>
-                </div>
-              </div>
-              <div className="p-5">
-                <h3 className="text-xl font-semibold text-gray-600 mb-2">Product Explainer Animation</h3>
-                <p className="text-gray-600">
-                  An engaging animation that clearly demonstrates product features and benefits.
-                </p>
-              </div>
-            </div>
-            
-            <div className="glass-card overflow-hidden">
-              <div className="relative aspect-video">
-                <img 
-                  src="https://images.unsplash.com/photo-1574717024453-354a08aab7c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" 
-                  alt="Corporate Brand Story" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 /50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-gray-600 text-xl font-medium">Brand Story</span>
-                </div>
-              </div>
-              <div className="p-5">
-                <h3 className="text-xl font-semibold text-gray-600 mb-2">Corporate Brand Story</h3>
-                <p className="text-gray-600">
-                  A compelling narrative animation that communicates company values and mission.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
       <QuoteFormSection />
     </ServicePageLayout>
   );

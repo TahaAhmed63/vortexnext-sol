@@ -46,13 +46,11 @@ const WebDevelopment = () => {
       icon: <Code className="w-7 h-7" />,
       title: "Custom Web Development",
       description: "Tailor-made websites designed to meet your specific business needs and goals.",
-      // image: "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     },
     {
       icon: <Smartphone className="w-7 h-7" />,
       title: "Responsive Design",
       description: "Websites that look and function beautifully on all devices, from desktops to smartphones.",
-      // image: "https://images.unsplash.com/photo-1616469829941-c7200edec809?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     },
     {
       icon: <Globe className="w-7 h-7" />,
@@ -66,7 +64,7 @@ const WebDevelopment = () => {
     },
     {
       icon: <Server className="w-7 h-7" />,
-      title: "Web Application Development",
+      title: "Web Application Development", 
       description: "Custom web applications that automate processes and enhance productivity."
     },
     {
@@ -125,11 +123,12 @@ const WebDevelopment = () => {
   return (
     <ServicePageLayout
       title="Web Design & Development"
-      description="Custom, responsive websites and applications that drive business growth."
+      description="Custom, responsive websites and applications that drive business growth. Our web development services include e-commerce solutions, responsive design, and website security."
+      metaKeywords="web development, custom web development, responsive design, e-commerce solutions, website security, content management systems, web application development, SEO optimization"
       heroImage="https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2339&q=80"
     >
       {/* Features Section */}
-      <section className="py-20  relative">
+      <section className="py-20 relative">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-pinkish-red/10 rounded-full blur-[100px] opacity-20"></div>
@@ -151,7 +150,6 @@ const WebDevelopment = () => {
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}
-                // image={feature?.image}
               />
             ))}
           </div>
@@ -183,35 +181,6 @@ const WebDevelopment = () => {
                 <p className="text-gray-600 mb-8">
                   By decoupling your WordPress CMS from the frontend presentation layer, we create a seamless architecture that dramatically improves site performance while maintaining all the functionality you rely on.
                 </p>
-                <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
-                  <h4 className="font-bold text-lg mb-3 text-blue-700">Why businesses are switching to headless:</h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <div className="mt-1 mr-3 text-electric-blue">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                      <span className="text-gray-700"><span className="font-semibold">400% faster</span> page load speeds compared to traditional WordPress</span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="mt-1 mr-3 text-electric-blue">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                      <span className="text-gray-700"><span className="font-semibold">60% reduction</span> in bounce rates due to improved performance</span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="mt-1 mr-3 text-electric-blue">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                      <span className="text-gray-700"><span className="font-semibold">Enhanced security</span> with reduced vulnerability surface area</span>
-                    </li>
-                  </ul>
-                </div>
               </div>
               <div>
                 <img 
@@ -344,7 +313,7 @@ const WebDevelopment = () => {
       </section>
 
       {/* Case Study Section */}
-      <section className="py-20  relative section-fade-in">
+      <section className="py-20 relative section-fade-in">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
@@ -358,7 +327,7 @@ const WebDevelopment = () => {
           <div className="glass-card p-8 md:p-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-2xl font-bold  mb-4">E-Commerce Platform Redesign</h3>
+                <h3 className="text-2xl font-bold mb-4">E-Commerce Platform Redesign</h3>
                 <p className="text-gray-600 mb-6">
                   A well-established retail business needed to modernize their online store to improve user experience and increase sales.
                 </p>
@@ -381,7 +350,7 @@ const WebDevelopment = () => {
                   </div>
                 </div>
                 <div className="bg-pinkish-red/10 p-4 rounded-lg border border-pinkish-red/30">
-                  <p className=" font-medium">Results:</p>
+                  <p className="font-medium">Results:</p>
                   <p className="text-gray-600">58% increase in mobile conversions and 42% overall sales growth within 3 months of launch.</p>
                 </div>
               </div>
@@ -396,47 +365,7 @@ const WebDevelopment = () => {
           </div>
         </div>
       </section>
-<QuoteFormSection/>
-      {/* Pricing Section */}
-      {/* <section className="py-20 /90 relative section-fade-in">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-              Web Development Packages
-            </h2>
-            <p className="text-lg text-gray-600">
-              Choose the package that best suits your business needs
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <PricingPackage 
-              title="Starter Package" 
-              price="$800 USD" 
-              description="Perfect for small businesses looking to establish an online presence"
-              features={starterFeatures}
-              ctaText="Get Started"
-            />
-            
-            <PricingPackage 
-              title="Business Package" 
-              price="$1,500 USD"
-              popular={true}
-              description="Ideal for growing businesses with more advanced requirements"
-              features={businessFeatures}
-              ctaText="Choose Business"
-            />
-            
-            <PricingPackage 
-              title="Enterprise Package" 
-              price="$2,200 USD"
-              description="Comprehensive solution for established businesses with complex needs"
-              features={enterpriseFeatures}
-              ctaText="Contact Us"
-            />
-          </div>
-        </div>
-      </section> */}
+      <QuoteFormSection/>
     </ServicePageLayout>
   );
 };
