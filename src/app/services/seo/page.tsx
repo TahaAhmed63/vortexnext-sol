@@ -102,10 +102,13 @@ const SEO = () => {
     { text: "Local SEO optimization", included: true }
   ];
 
+  const metaKeywords = "SEO, Search Engine Optimization, Keyword Research, On-Page SEO, Technical SEO, Link Building, Local SEO, Performance Tracking, Digital Marketing";
+
   return (
     <ServicePageLayout
       title="Search Engine Optimization"
       description="Drive organic traffic and increase your online visibility with our SEO services."
+      metaKeywords={metaKeywords}
       heroImage="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     >
       {/* Features Section */}
@@ -131,7 +134,6 @@ const SEO = () => {
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}
-                // image={index < 2 ? `https://images.unsplash.com/photo-${index === 0 ? '1571844511263-55af08fff4cf' : '1552664730-b9ef494abaa5'}?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80` : undefined}
               />
             ))}
           </div>

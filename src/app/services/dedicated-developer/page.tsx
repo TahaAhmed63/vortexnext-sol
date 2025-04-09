@@ -113,10 +113,13 @@ const DedicatedDeveloper = () => {
     { text: "Direct communication via Slack/Teams", included: true }
   ];
 
+  const metaKeywords = "dedicated developer, hire developer, software development, custom software solutions, remote developers, tech talent, agile development, project management, quality assurance";
+
   return (
     <ServicePageLayout
       title="Dedicated Developer Services"
       description="Access skilled developers tailored to your project requirements."
+      metaKeywords={metaKeywords}
       heroImage="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     >
       {/* Features Section */}
@@ -142,8 +145,7 @@ const DedicatedDeveloper = () => {
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}
-                // image={index < 2 ? `https://images.unsplash.com/photo-${index === 0 ? '1573497491765-dccce02b3982' : '1522252234503-e356532cafd5'}?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80` : undefined}
-            />
+              />
             ))}
           </div>
         </div>

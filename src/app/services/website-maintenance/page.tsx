@@ -102,10 +102,13 @@ const WebsiteMaintenance = () => {
     { text: "Advanced security monitoring", included: true }
   ];
 
+  const metaKeywords = "website maintenance, website security, website updates, backup management, performance optimization, technical support, uptime monitoring";
+
   return (
     <ServicePageLayout
       title="Website Maintenance Services"
       description="Keep your website secure, up-to-date, and performing at its best with our maintenance packages."
+      metaKeywords={metaKeywords}
       heroImage="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     >
       {/* Features Section */}

@@ -115,10 +115,13 @@ export default function AiDrivenSolution() {
         { text: "24/7 Priority support", included: true }
     ];
 
+    const metaKeywords = "AI solutions, machine learning, process automation, AI infrastructure, predictive analytics, custom AI models, AI integration, business automation, AI technologies, enterprise AI solutions";
+
     return (
         <ServicePageLayout
             title="AI-Driven Solutions"
             description="Transform your business with cutting-edge artificial intelligence and automation"
+            metaKeywords={metaKeywords}
             heroImage="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
         >
             <section className="py-20 relative">

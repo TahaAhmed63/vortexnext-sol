@@ -114,10 +114,13 @@ export default function MobileAppDevelopment() {
         { text: "12 months support", included: true }
     ];
 
+    const metaKeywords = "Mobile App Development, iOS Development, Android Development, Cross-Platform Apps, App Development Services, Custom Mobile Apps, Mobile App Design, App Development Packages, Mobile Technologies, App Store Submission";
+
     return (
         <ServicePageLayout
             title="Mobile App Development"
             description="Transform your ideas into powerful mobile applications"
+            metaKeywords={metaKeywords}
             heroImage="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
         >
             <section className="py-20 relative">

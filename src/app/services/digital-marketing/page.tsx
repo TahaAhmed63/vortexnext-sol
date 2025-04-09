@@ -117,14 +117,17 @@ const DigitalMarketing = () => {
     }
   ];
 
+  const metaKeywords = "Digital Marketing, SEO, Social Media Marketing, PPC Advertising, Content Marketing, Mobile Marketing, Analytics, Audience Targeting, Online Marketing";
+
   return (
     <ServicePageLayout
       title="Digital Marketing Solutions"
       description="Expand your online presence and engage your target audience with our strategic digital marketing services."
+      metaKeywords={metaKeywords}
       heroImage="https://images.unsplash.com/photo-1557838923-2985c318be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2342&q=80"
     >
       {/* Features Section */}
-      <section className="py-20  relative">
+      <section className="py-20 relative">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-pinkish-red/10 rounded-full blur-[100px] opacity-20"></div>

@@ -115,10 +115,13 @@ export default function CrmDevelopment() {
         { text: "24/7 Priority support", included: true }
     ];
 
+    const metaKeywords = "CRM Development, Custom CRM Solutions, CRM Features, CRM Packages, CRM Technologies, Sales Automation, Customer Management, Data Integration, Mobile CRM, CRM Testimonials";
+
     return (
         <ServicePageLayout
             title="Custom CRM Development"
             description="Transform your customer relationship management with our tailored CRM solutions"
+            metaKeywords={metaKeywords}
             heroImage="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
         >
             <section className="py-20 relative">
@@ -331,5 +334,3 @@ export default function CrmDevelopment() {
         </ServicePageLayout>
     );
 }
-
-
