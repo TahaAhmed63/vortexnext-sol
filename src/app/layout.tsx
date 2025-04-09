@@ -53,7 +53,7 @@ export default function RootLayout({
         <meta property="og:image" content="/lovable-uploads/New Project (22).png" />
         <link rel="icon" type="image/png" href="/lovable-uploads/New Project (22).png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <meta name="google-site-verification" content="ErHA5F6HLFg23xex8_ZMDj1Zh8JGFKKhXhQVh9x7Vj4" />
+        <meta name="google-site-verification" content="JSMGfhWBuH-FljxhJCmsk4xM9aPqDX3WwKAmryAfhyA" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
       </head>
