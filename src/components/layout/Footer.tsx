@@ -72,7 +72,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-blue-400 mr-3" />
-                <span className="text-gray-600">info@vortexsolution.com</span>
+                <span className="text-gray-600">info@vortexsolution.io</span>
               </li>
             </ul>
           </div>
