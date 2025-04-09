@@ -103,8 +103,8 @@ const ContactSection = () => {
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-medium text-black">Email Us</h4>
-                  <p className="text-gray-600 mt-1">info@vortexsolutions.com</p>
-                  <p className="text-gray-600">support@vortexsolutions.com</p>
+                  <p className="text-gray-600 mt-1">info@vortexsolutions.io</p>
+                  <p className="text-gray-600">support@vortexsolutions.io</p>
                 </div>
               </div>
               

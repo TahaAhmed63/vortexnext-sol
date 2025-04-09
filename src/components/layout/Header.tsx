@@ -23,7 +23,7 @@ const Header = () => {
       { name: 'Case Studies', href: '#case-studies' },
       { name: 'Testimonials', href: '#testimonials' },
       { name: 'Blog', href: '#blog' },
-      { name: 'Contact', href: '#contact' },
+      { name: 'Contact', href: '/contact' },
     ];
 
     // Services submenu items
