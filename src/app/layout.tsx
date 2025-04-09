@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import "./globals.css"
 import { Inter, Poppins } from "next/font/google"
+import Script from 'next/script'
 
 // Initialize the fonts
 const inter = Inter({
@@ -56,6 +57,19 @@ export default function RootLayout({
         <meta name="google-site-verification" content="JSMGfhWBuH-FljxhJCmsk4xM9aPqDX3WwKAmryAfhyA" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-RHMB4WYK8S"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RHMB4WYK8S');
+          `}
+        </Script>
       </head>
       <body className="min-h-screen bg-white antialiased">{children}</body>
     </html>
