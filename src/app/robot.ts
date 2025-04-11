@@ -17,7 +17,7 @@ export default function robots(): MetadataRoute.Robots {
         ],
       },
     ],
-    sitemap: 'https://yourdomain.com/sitemap.xml',
-    host: 'https://yourdomain.com',
+    sitemap: 'https://vortexsolution.io/sitemap.xml',
+    host: 'https://vortexsolution.io/',
   }
 }
