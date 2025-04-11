@@ -19,21 +19,21 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Vortex Solution | Virtual Operation For Reliable Tech Excellence",
-  description: "Vortex Solution specializes in AI-driven digital marketing solutions, CRM development, web and mobile app development to transform businesses.",
+  title: "Vortex Solution | Innovative Digital Solutions for Your Business",
+  description: "Vortex Solution offers tailored digital strategies, including AI-enhanced marketing, custom CRM solutions, and user-friendly web and mobile applications to elevate your business.",
   authors: [{ name: "Vortex Solution" }],
-  keywords: ["AI solutions", "digital marketing", "CRM development", "web development", "mobile app development"],
+  keywords: ["custom digital solutions", "AI marketing strategies", "tailored CRM systems", "user-friendly web apps", "mobile application development"],
   openGraph: {
     type: "website",
     url: "https://vortexsolution.io/",
-    title: "Vortex Solution | Virtual Operation For Reliable Tech Excellence",
-    description: "Transform your business with our AI-driven digital marketing and development solutions.",
+    title: "Vortex Solution | Innovative Digital Solutions for Your Business",
+    description: "Elevate your business with our tailored digital strategies and AI-enhanced solutions.",
     images: [{ url: "/lovable-uploads/New Project (22).png" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vortex Solution | Virtual Operation For Reliable Tech Excellence",
-    description: "Transform your business with our AI-driven digital marketing and development solutions.",
+    title: "Vortex Solution | Innovative Digital Solutions for Your Business",
+    description: "Elevate your business with our tailored digital strategies and AI-enhanced solutions.",
     images: ["/lovable-uploads/New Project (22).png"],
   },
   icons: {
