@@ -4,10 +4,24 @@ import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ArrowRight
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useState } from 'react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const subscribe = async (e) => {
+    e.preventDefault();
+    const res = await fetch('/api/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email })
+    });
+
+    const data = await res.json();
+    setMessage(data.message);
+    if (res.ok) setEmail('');
+  };
   return (
     <footer className="bg-dark text-white pt-16 pb-8">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -84,16 +98,21 @@ const Footer = () => {
               Subscribe to our newsletter for the latest industry insights and company news.
             </p>
             <div className="flex flex-col space-y-3">
+            <form onSubmit={subscribe} className='flex flex-col space-y-3'>
               <Input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Your email address"
                 className="bg-white border-gray-700 text-gray-600 placeholder:text-gray-500 focus:border-blue-500"
               />
               <Button
-                className="bg-gradient-to-r from-pinkish-red to-pinkish-red-light hover:opacity-90 text-white font-medium rounded-md px-6 py-2.5 transition-all duration-300 shadow-md hover:shadow-pinkish-red/30"
+                className="bg-gradient-to-r  from-pinkish-red to-pinkish-red-light hover:opacity-90 text-white font-medium rounded-md px-6 py-2.5 transition-all duration-300 shadow-md hover:shadow-pinkish-red/30"
               >
                 Subscribe
               </Button>
+              {message && <p>{message}</p>}
+              </form>
             </div>
           </div>
         </div>
