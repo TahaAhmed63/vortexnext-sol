@@ -22,12 +22,12 @@ const ProjectsSection = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "AI-Powered Analytics Dashboard",
-      description: "An advanced analytics platform that uses machine learning to provide predictive insights and visualize complex data patterns.",
-      image: "/lovable-uploads/aideshboard.avif",
-      technologies: ["React", "TypeScript", "TensorFlow.js", "D3.js"],
+      title: "Luxuries Perfume Brand Bliss n Bless",
+      description: "A premium e-commerce platform featuring stunning 3D product visualizations, immersive animations, and a fully responsive design that showcases luxury perfumes with elegant transitions and interactive elements.",
+      image: "/lovable-uploads/project1.png",
+      technologies: ["Next Js ", "TypeScript", "Tailwindcss", "woocomerce Api"],
       githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
+      liveUrl: "https://www.blissnbless.shop/",
       featured: true
     },
     {
