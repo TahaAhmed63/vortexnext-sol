@@ -42,11 +42,11 @@ const ProjectsSection = () => {
     },
     {
       id: 3,
-      title: "E-commerce Mobile App",
-      description: "A cross-platform shopping application with personalized recommendations and seamless payment processing.",
-      image: "/lovable-uploads/mobileapp.avif",
+      title: "GymTOX",
+      description: "A mobile fitness and nutrition app that offers personalized workout plans, nutrition tracking, and seamless integration with wearable devices.",
+      image: "/lovable-uploads/gymtox.png",
       technologies: ["React Native", "Firebase", "Stripe API"],
-      githubUrl: "https://github.com",
+      githubUrl: "https://github.com/TahaAhmed63/gym_app",
       featured: false
     },
     {
