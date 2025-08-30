@@ -45,7 +45,7 @@ const ProjectsSection = () => {
       title: "GymTOX",
       description: "A mobile fitness and nutrition app that offers personalized workout plans, nutrition tracking, and seamless integration with wearable devices.",
       image: "/lovable-uploads/gymtox.png",
-      technologies: ["React Native", "Firebase", "Stripe API"],
+      technologies: ["React Native", "Node js", "supabase"],
       githubUrl: "https://github.com/TahaAhmed63/gym_app",
       featured: false
     },
