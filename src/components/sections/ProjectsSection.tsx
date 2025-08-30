@@ -26,18 +26,18 @@ const ProjectsSection = () => {
       description: "A premium e-commerce platform featuring stunning 3D product visualizations, immersive animations, and a fully responsive design that showcases luxury perfumes with elegant transitions and interactive elements.",
       image: "/lovable-uploads/project1.png",
       technologies: ["Next Js ", "TypeScript", "Tailwindcss", "woocomerce Api"],
-      githubUrl: "https://github.com",
+      githubUrl: "https://github.com/TahaAhmed63/bliss-n-bless",
       liveUrl: "https://www.blissnbless.shop/",
       featured: true
     },
     {
       id: 2,
-      title: "Enterprise CRM Solution",
-      description: "A comprehensive customer relationship management system with advanced automation and reporting capabilities.",
-      image: "/lovable-uploads/crm.avif",
+      title: "Concrete pro ",
+      description: "A professional website showcasing concrete and sealing solutions for residential and commercial properties, featuring project galleries, service details, and customer testimonials.",
+      image: "/lovable-uploads/image (55).png",
       technologies: ["React", "Node.js", "MongoDB", "Redux"],
       githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
+      liveUrl: "https://concrete-canvas-build.vercel.app/",
       featured: true
     },
     {
