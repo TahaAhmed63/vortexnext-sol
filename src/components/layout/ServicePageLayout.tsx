@@ -59,34 +59,28 @@ const ServicePageLayout = ({
       <Header />
       <main className="flex-grow">
         {/* Hero section */}
-        <section 
-          className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden"
+        <section
+          className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-white"
         >
-          {/* Background decoration */}
-          {!heroImage && (
-            <div className="absolute inset-0 z-0 overflow-hidden">
-              <div className="absolute top-0 right-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
-              <div className="absolute bottom-0 left-0 w-96 h-96 bg-pinkish-red/10 rounded-full blur-[100px] opacity-20"></div>
-            </div>
-          )}
-          
-          <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="container max-w-7xl mx-auto px-8 lg:px-16 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Left Content */}
               <div className="max-w-3xl">
-                <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">{title}</h1>
-                <p className="text-xl text-gray-600 mb-8">{description}</p>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#0F172A] leading-tight">{title}</h1>
+                <p className="text-xl text-gray-600 mb-8 leading-relaxed">{description}</p>
                 <div className="flex flex-wrap gap-4">
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     onClick={() => document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' })}
+                    className="bg-[#E7107E] hover:bg-[#E7107E]/90 text-white rounded-full px-10 py-7 font-semibold text-base uppercase tracking-wide transition-all duration-200"
                   >
                     Get a Quote
                   </Button>
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     size="lg"
                     onClick={() => window.location.href = '/contact'}
+                    className="border-2 border-[#E7107E] text-[#E7107E] hover:bg-[#E7107E] hover:text-white rounded-full px-10 py-7 font-semibold text-base uppercase tracking-wide transition-all duration-200"
                   >
                     Contact Us
                   </Button>
@@ -94,7 +88,7 @@ const ServicePageLayout = ({
               </div>
 
               {/* Right Content - Image Carousel */}
-              <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden">
+              <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
                 {serviceImages.map((image, index) => (
                   <div
                     key={image}
@@ -118,8 +112,8 @@ const ServicePageLayout = ({
                       key={index}
                       className={cn(
                         "w-2 h-2 rounded-full transition-all duration-300",
-                        index === currentImageIndex 
-                          ? "bg-pinkish-red w-4" 
+                        index === currentImageIndex
+                          ? "bg-[#E7107E] w-4"
                           : "bg-white/50 hover:bg-white/75"
                       )}
                       onClick={() => setCurrentImageIndex(index)}
@@ -131,25 +125,22 @@ const ServicePageLayout = ({
             </div>
           </div>
         </section>
-        
+
         {/* Main content */}
         {children}
-        
+
         {/* CTA Section */}
-        <section className="py-20 relative">
-          <div className="absolute inset-0 z-0 overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
-          </div>
-          <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="glass-card p-8 md:p-12 text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gradient">Ready to Transform Your Digital Presence?</h2>
-              <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+        <section className="py-24 lg:py-32 bg-[#0F172A] relative">
+          <div className="container max-w-7xl mx-auto px-8 lg:px-16 relative z-10">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12 md:p-16 text-center border border-white/10">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">Ready to Transform Your Business?</h2>
+              <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
                 Let's discuss how our services can help your business thrive in the digital landscape.
               </p>
-              <Button 
+              <Button
                 size="lg"
                 onClick={() => document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' })}
-                className="group"
+                className="group bg-[#E7107E] hover:bg-[#E7107E]/90 text-white rounded-full px-10 py-7 font-semibold text-base uppercase tracking-wide transition-all duration-200"
               >
                 Get Started Today
                 <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />

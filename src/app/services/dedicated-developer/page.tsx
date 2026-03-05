@@ -3,7 +3,6 @@ import React, { useEffect } from 'react';
 import ServicePageLayout from '@/components/layout/ServicePageLayout';
 import PricingPackage, { PricingFeature } from '@/components/services/PricingPackage';
 import ServiceFeature from '@/components/services/ServiceFeature';
-import Testimonial from '@/components/services/Testimonial';
 import { UserPlus, Code, Lightbulb, Clock, MessageSquare, CheckCircle } from 'lucide-react';
 import QuoteFormSection from '@/components/sections/QuoteFormSection';
 
@@ -73,22 +72,6 @@ const DedicatedDeveloper = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      quote: "Having a dedicated developer from this service has been a game-changer for our project. Their expertise and commitment have significantly accelerated our development timeline.",
-      author: "Alex Johnson",
-      company: "Innovatech Solutions",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1531427186611-ecfd6d936e63?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-    },
-    {
-      quote: "The dedicated developer we hired quickly integrated into our team and has been instrumental in delivering high-quality code. Their proactive approach and problem-solving skills are invaluable.",
-      author: "Sarah Williams",
-      company: "WebDev Dynamics",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1532980400857-c99fe3968aca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-    }
-  ];
 
   const basicFeatures: PricingFeature[] = [
     { text: "40 hours per week", included: true },
@@ -123,17 +106,13 @@ const DedicatedDeveloper = () => {
       heroImage="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     >
       {/* Features Section */}
-      <section className="py-20  relative">
-        <div className="absolute inset-0 z-0 overflow-hidden">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-pinkish-red/10 rounded-full blur-[100px] opacity-20"></div>
-        </div>
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 section-fade-in">
+      <section className="py-24 lg:py-32 bg-white relative">
+        <div className="container max-w-7xl mx-auto px-8 lg:px-16 relative z-10 section-fade-in">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#0F172A]">
               Why Hire a Dedicated Developer?
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 leading-relaxed">
               Get access to top talent focused solely on your projects
             </p>
           </div>
@@ -151,41 +130,14 @@ const DedicatedDeveloper = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 /90 relative section-fade-in">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-              What Our Clients Say
-            </h2>
-            <p className="text-lg text-gray-600">
-              Hear from businesses that have transformed their development process
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <Testimonial
-                key={index}
-                quote={testimonial.quote}
-                author={testimonial.author}
-                company={testimonial.company}
-                rating={testimonial.rating}
-                image={testimonial.image}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Pricing Section */}
-      <section className="py-20 /90 relative section-fade-in">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="py-24 lg:py-32 bg-[#F8F9FC] relative section-fade-in">
+        <div className="container max-w-7xl mx-auto px-8 lg:px-16 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#0F172A]">
               Dedicated Developer Packages
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 leading-relaxed">
               Choose the package that best suits your project needs
             </p>
           </div>
@@ -213,60 +165,60 @@ const DedicatedDeveloper = () => {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-20  relative section-fade-in">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="py-24 lg:py-32 bg-white relative section-fade-in">
+        <div className="container max-w-7xl mx-auto px-8 lg:px-16 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#0F172A]">
               Technology Expertise
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 leading-relaxed">
               Our developers are proficient in a wide range of technologies
             </p>
           </div>
 
-          <div className="glass-card p-8">
+          <div className="bg-white rounded-2xl p-8 shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-xl font-semibold text-gray-600 mb-4">Frontend Technologies</h3>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                  <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                  <div className="bg-[#E7107E]/10 p-3 rounded-md text-center">
                     <span className="text-gray-600">React</span>
                   </div>
-                  <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                  <div className="bg-[#E7107E]/10 p-3 rounded-md text-center">
                     <span className="text-gray-600">Vue.js</span>
                   </div>
-                  <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                  <div className="bg-[#E7107E]/10 p-3 rounded-md text-center">
                     <span className="text-gray-600">Angular</span>
                   </div>
-                  <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                  <div className="bg-[#E7107E]/10 p-3 rounded-md text-center">
                     <span className="text-gray-600">TypeScript</span>
                   </div>
-                  <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                  <div className="bg-[#E7107E]/10 p-3 rounded-md text-center">
                     <span className="text-gray-600">Next.js</span>
                   </div>
-                  <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                  <div className="bg-[#E7107E]/10 p-3 rounded-md text-center">
                     <span className="text-gray-600">Tailwind</span>
                   </div>
                 </div>
-                
+
                 <h3 className="text-xl font-semibold text-gray-600 mt-8 mb-4">Backend Technologies</h3>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                  <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                  <div className="bg-[#E7107E]/10 p-3 rounded-md text-center">
                     <span className="text-gray-600">Node.js</span>
                   </div>
-                  <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                  <div className="bg-[#E7107E]/10 p-3 rounded-md text-center">
                     <span className="text-gray-600">PHP</span>
                   </div>
-                  <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                  <div className="bg-[#E7107E]/10 p-3 rounded-md text-center">
                     <span className="text-gray-600">Python</span>
                   </div>
-                  <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                  <div className="bg-[#E7107E]/10 p-3 rounded-md text-center">
                     <span className="text-gray-600">Java</span>
                   </div>
-                  <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                  <div className="bg-[#E7107E]/10 p-3 rounded-md text-center">
                     <span className="text-gray-600">MongoDB</span>
                   </div>
-                  <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                  <div className="bg-[#E7107E]/10 p-3 rounded-md text-center">
                     <span className="text-gray-600">SQL</span>
                   </div>
                 </div>
@@ -285,13 +237,13 @@ const DedicatedDeveloper = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20  relative section-fade-in">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="py-24 lg:py-32 bg-[#F8F9FC] relative section-fade-in">
+        <div className="container max-w-7xl mx-auto px-8 lg:px-16 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#0F172A]">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 leading-relaxed">
               Answers to common questions about our dedicated developer services
             </p>
           </div>

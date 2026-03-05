@@ -1,151 +1,86 @@
-
-import React, { useEffect, useRef } from 'react';
-import { ChevronRight, ArrowRight, Star, Sparkles } from 'lucide-react';
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
-  const heroRef = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      if (heroRef.current) {
-        // Parallax effect
-        heroRef.current.style.transform = `translateY(${scrollY * 0.1}px)`;
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <section className="relative min-h-screen flex items-center py-20 mt-10 overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-pinkish-red/30 rounded-full blur-[100px] opacity-20"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-pinkish-red/5 rounded-full blur-[80px]"></div>
-      </div>
-
-      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="pt-32 pb-20 bg-white">
+      <div className="container max-w-7xl mx-auto px-8 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Hero content */}
-          <div className="space-y-8 text-center lg:text-left">
-            <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-pinkish-red/10 border border-pinkish-red/30">
-              <Sparkles className="w-4 h-4 mr-2 text-pinkish-red" />
-              <span className="text-sm font-medium text-pinkish-red">AI-Powered Innovation</span>
-            </div>
-            
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              Transform Your <span className="text-gradient">Digital</span> Experience
+          {/* Left content */}
+          <div className="max-w-2xl">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#0F172A] leading-tight mb-8">
+              Custom Software
+              <br />
+              Development
             </h1>
-            
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0">
-              Discover innovative solutions in digital marketing and software development to enhance your business operations.
+
+            <p className="text-xl text-gray-600 leading-relaxed mb-10">
+              We build custom web and mobile applications that help businesses automate processes, scale operations, and achieve their goals.
             </p>
-            
-            <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <Button
                 size="lg"
-                className="w-full sm:w-auto"
+                className="bg-[#E7107E] hover:bg-[#c00e6b] text-white font-bold text-sm uppercase px-10 py-7 rounded-full transition-all duration-200"
                 onClick={() => document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Get Started <ArrowRight className="ml-2 h-5 w-5" />
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              
+
               <Button
-                variant="outline"
                 size="lg"
-                className="w-full sm:w-auto"
-                onClick={() => document.getElementById('case-studies')?.scrollIntoView({ behavior: 'smooth' })}
+                variant="outline"
+                className="border-2 border-gray-300 text-[#0F172A] hover:bg-gray-50 font-semibold px-10 py-7 rounded-full transition-all duration-200"
+                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                View Case Studies <ChevronRight className="ml-1 h-5 w-5" />
+                View Projects
               </Button>
             </div>
-            
-            {/* <div className="flex items-center justify-center lg:justify-start space-x-8 pt-4">
-              <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-10 h-10 rounded-full border-2 border-black overflow-hidden">
-                    <img 
-                      src={`https://randomuser.me/api/portraits/${i % 2 === 0 ? 'women' : 'men'}/${i + 20}.jpg`}
-                      alt="Client"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ))}
+
+            {/* Stats */}
+            <div className="flex items-center gap-8 pt-8 border-t border-gray-200">
+              <div>
+                <div className="text-3xl font-bold text-[#0F172A]">250+</div>
+                <div className="text-sm text-gray-600">Projects Delivered</div>
               </div>
-              <div className="flex items-center">
-                <div className="flex items-center">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <Star key={i} className="w-4 h-4 text-pinkish-red fill-pinkish-red" />
-                  ))}
-                </div>
-                <span className="ml-2 text-sm text-gray-600">
-                  <span className="font-bold">4.9/5</span> from 200+ reviews
-                </span>
+              <div>
+                <div className="text-3xl font-bold text-[#0F172A]">98%</div>
+                <div className="text-sm text-gray-600">Client Satisfaction</div>
               </div>
-            </div> */}
+              <div>
+                <div className="text-3xl font-bold text-[#0F172A]">150+</div>
+                <div className="text-sm text-gray-600">Happy Clients</div>
+              </div>
+            </div>
           </div>
 
-          {/* Hero image */}
-          <div 
-            className="relative mx-auto max-w-lg lg:max-w-none"
-            ref={heroRef}
-          >
-            <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-pinkish-red/50 to-pinkish-red-light/50 rounded-2xl blur opacity-20"></div>
-              <div className="relative glass-card p-1 rounded-2xl overflow-hidden">
-                <img 
-                  src="/lovable-uploads/photo-1581091226825-a6a2a5aee158.avif" 
-                  alt="AI-Driven Solutions" 
-                  className="w-full h-auto rounded-xl"
-                />
-                
-                {/* Stats cards */}
-                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-[90%] bg-black/80 backdrop-blur-xl rounded-xl p-4 border border-pinkish-red/30">
-                  <div className="grid grid-cols-3 gap-4">
-                    <div className="text-center">
-                      <p className="text-gray-600 text-xs">Growth</p>
-                      <p className="text-pinkish-red font-bold text-xl">+147%</p>
-                    </div>
-                    <div className="text-center border-x border-pinkish-red/20">
-                      <p className="text-gray-600 text-xs">Projects</p>
-                      <p className="text-white font-bold text-xl">250+</p>
-                    </div>
-                    <div className="text-center">
-                      <p className="text-gray-600 text-xs">Retention</p>
-                      <p className="text-pinkish-red font-bold text-xl">98%</p>
-                    </div>
+          {/* Right content - Image */}
+          <div className="relative">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
+                alt="Team collaboration"
+                className="w-full h-auto"
+              />
+              {/* Accent card overlay */}
+              <div className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-lg">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-[#E7107E] rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                    ✓
                   </div>
-                </div>
-                
-                {/* Feature cards */}
-                <div className="absolute top-5 -right-12 bg-black/80 backdrop-blur-xl rounded-xl p-3 border border-pinkish-red/30 shadow-xl">
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 rounded-full bg-pinkish-red/20 flex items-center justify-center mr-3">
-                      <Sparkles className="w-5 h-5 text-pinkish-red" />
-                    </div>
-                    <div>
-                      <p className="text-white font-medium text-sm">AI Powered</p>
-                      <p className="text-gray-600 text-xs">Next-gen solutions</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="absolute top-32 -left-12 bg-black/80 backdrop-blur-xl rounded-xl p-3 border border-pinkish-red/30 shadow-xl">
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 rounded-full bg-pinkish-red/20 flex items-center justify-center mr-3">
-                      <Star className="w-5 h-5 text-pinkish-red" />
-                    </div>
-                    <div>
-                      <p className="text-white font-medium text-sm">Premium Quality</p>
-                      <p className="text-gray-600 text-xs">Industry leading</p>
-                    </div>
+                  <div>
+                    <div className="font-bold text-[#0F172A]">Quality Guaranteed</div>
+                    <div className="text-sm text-gray-600">Trusted by 150+ companies worldwide</div>
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* Floating badge */}
+            <div className="absolute -top-6 -right-6 bg-[#E7107E] text-white px-6 py-3 rounded-full font-semibold shadow-lg">
+              #1 Rated
             </div>
           </div>
         </div>

@@ -1,242 +1,208 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { Code, ExternalLink, Github, Tv } from 'lucide-react';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import React, { useRef, useState } from 'react';
+import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 
 interface Project {
   id: number;
-  title: string;
+  name: string;
+  category: string;
   description: string;
   image: string;
-  technologies: string[];
-  githubUrl?: string;
   liveUrl?: string;
-  featured: boolean;
 }
 
 const ProjectsSection = () => {
-  const [activeFilter, setActiveFilter] = useState<string>('all');
-  const sectionRef = useRef<HTMLDivElement>(null);
-  
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
   const projects: Project[] = [
     {
       id: 1,
-      title: "Luxuries Perfume Brand Bliss n Bless",
-      description: "A premium e-commerce platform featuring stunning 3D product visualizations, immersive animations, and a fully responsive design that showcases luxury perfumes with elegant transitions and interactive elements.",
-      image: "/lovable-uploads/project1.png",
-      technologies: ["Next Js ", "TypeScript", "Tailwindcss", "woocomerce Api"],
-      githubUrl: "https://github.com/TahaAhmed63/bliss-n-bless",
-      liveUrl: "https://www.blissnbless.shop/",
-      featured: true
+      name: "Fave",
+      category: "Entertainment / SaaS / Mobile App",
+      description: "Community-driven gaming platform focused on immersive social features and scalable architecture.",
+      image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=800&q=80",
+      liveUrl: "#"
     },
     {
       id: 2,
-      title: "Concrete pro ",
-      description: "A professional website showcasing concrete and sealing solutions for residential and commercial properties, featuring project galleries, service details, and customer testimonials.",
-      image: "/lovable-uploads/image (55).png",
-      technologies: ["React", "Node.js", "MongoDB", "Redux"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://concrete-canvas-build.vercel.app/",
-      featured: true
+      name: "Apiax",
+      category: "Fintech / SaaS",
+      description: "A regulatory compliance platform enabling financial companies to manage digital regulations across jurisdictions.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+      liveUrl: "#"
     },
     {
       id: 3,
-      title: "GymTOX",
-      description: "A mobile fitness and nutrition app that offers personalized workout plans, nutrition tracking, and seamless integration with wearable devices.",
-      image: "/lovable-uploads/gymtox.png",
-      technologies: ["React Native", "Node js", "supabase"],
-      githubUrl: "https://github.com/TahaAhmed63/gym_app",
-      featured: false
+      name: "Bliss n Bless",
+      category: "E-Commerce / Retail",
+      description: "Premium perfume e-commerce platform with stunning 3D product visualizations and automated inventory management.",
+      image: "/lovable-uploads/project1.png",
+      liveUrl: "https://www.blissnbless.shop/"
     },
     {
       id: 4,
-      title: "Smart Home IoT Platform",
-      description: "An integrated system for managing connected devices with real-time monitoring and automated responses.",
-      image: "/lovable-uploads/smarthome.avif",
-      technologies: ["Python", "MQTT", "React", "AWS IoT"],
-      liveUrl: "https://example.com",
-      featured: false
+      name: "TravelSmooth",
+      category: "Travel / SaaS",
+      description: "Comprehensive travel booking platform automating tour packages and customer itineraries at scale.",
+      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80",
+      liveUrl: "https://travelsmooth.com.pk/"
     },
     {
       id: 5,
-      title: "Blockchain Supply Chain Tracker",
-      description: "A transparent supply chain management system built on blockchain technology for verification and traceability.",
-      image: "/lovable-uploads/blockchain.avif",
-      technologies: ["Solidity", "Ethereum", "React", "Web3.js"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
-      featured: false
+      name: "Haval Society",
+      category: "Automotive / SaaS",
+      description: "Premium automotive dealership platform with virtual showrooms and intelligent CRM integration.",
+      image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=80",
+      liveUrl: "https://havalsociety.com/"
     },
     {
       id: 6,
-      title: "AI Content Generator",
-      description: "An intelligent content creation tool that leverages natural language processing to generate marketing copy.",
-      image: "/lovable-uploads/aicontent.avif",
-      technologies: ["Python", "GPT-3", "React", "FastAPI"],
-      githubUrl: "https://github.com",
-      featured: true
+      name: "Concrete Pro",
+      category: "Construction / B2B",
+      description: "Professional construction platform with automated quote generation and project management tools.",
+      image: "/lovable-uploads/image (55).png",
+      liveUrl: "https://concrete-canvas-build.vercel.app/"
     }
   ];
 
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
-    : activeFilter === 'featured' 
-      ? projects.filter(project => project.featured) 
-      : projects.filter(project => project.technologies.includes(activeFilter));
-console.log(filteredProjects,"filteredProjects")
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 400;
+      const newScrollLeft = direction === 'left'
+        ? scrollContainerRef.current.scrollLeft - scrollAmount
+        : scrollContainerRef.current.scrollLeft + scrollAmount;
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+      scrollContainerRef.current.scrollTo({
+        left: newScrollLeft,
+        behavior: 'smooth'
+      });
     }
+  };
 
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
-
-  // All unique technologies for filtering
-  const allTechnologies = Array.from(
-    new Set(projects.flatMap(project => project.technologies))
-  ).sort();
+  const checkScroll = () => {
+    if (scrollContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+    }
+  };
 
   return (
-    <section id="projects" className="py-20 bg-pure-white" ref={sectionRef}>
-      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16 section-fade-in">
-          <span className="inline-block px-3 py-1 text-xs font-semibold text-pinkish-red bg-pinkish-red/10 rounded-full">
-            Our Work
-          </span>
-          <h2 className="mt-3 text-3xl md:text-4xl font-bold text-dark-gray">
-            Featured <span className='text-pinkish-red'>  Projects</span>
-          </h2>
-          <p className="mt-4 text-xl text-cool-gray">
-            Explore our portfolio of innovative solutions across various technologies
-          </p>
+    <section id="projects" className="py-24 lg:py-32 bg-white">
+      <div className="container max-w-[1400px] mx-auto px-8 lg:px-16">
+        {/* Header Row */}
+        <div className="flex items-end justify-between mb-12">
+          <div className="max-w-3xl">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0F172A] leading-tight">
+              The projects we've brought to life
+            </h2>
+          </div>
+
+          {/* Navigation Arrows */}
+          <div className="hidden md:flex items-center gap-3">
+            <button
+              onClick={() => scroll('left')}
+              disabled={!canScrollLeft}
+              className={`w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all duration-200 ${
+                canScrollLeft
+                  ? 'border-[#E7107E] text-[#E7107E] hover:bg-[#E7107E] hover:text-white'
+                  : 'border-gray-300 text-gray-300 cursor-not-allowed'
+              }`}
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              onClick={() => scroll('right')}
+              disabled={!canScrollRight}
+              className={`w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all duration-200 ${
+                canScrollRight
+                  ? 'border-[#E7107E] text-[#E7107E] hover:bg-[#E7107E] hover:text-white'
+                  : 'border-gray-300 text-gray-300 cursor-not-allowed'
+              }`}
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
         </div>
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap gap-2 justify-center mb-12">
-          <Button 
-            variant={activeFilter === 'all' ? 'default' : 'outline'} 
-            onClick={() => setActiveFilter('all')}
-            className={activeFilter === 'all' 
-              ? 'bg-pinkish-red hover:bg-pinkish-red-dark text-pure-white bg-white bg-gradient-to-r' 
-              : 'border-light-gray text-dark-gray hover:bg-white'}
-          >
-            All Projects
-          </Button>
-          <Button 
-            variant={activeFilter === 'featured' ? 'default' : 'outline'} 
-            onClick={() => setActiveFilter('featured')}
-            className={activeFilter === 'featured' 
-              ? 'bg-pinkish-red hover:bg-pinkish-red-dark text-pure-white  bg-gradient-to-r' 
-              : 'border-light-gray text-dark-gray hover:bg-white'}
-          >
-            Featured
-          </Button>
-          {allTechnologies.map(tech => (
-            <Button 
-              key={tech}
-              variant={activeFilter === tech ? 'default' : 'outline'} 
-              onClick={() => setActiveFilter(tech)}
-              className={activeFilter === tech 
-                ? 'bg-pinkish-red hover:bg-pinkish-red-dark text-pure-white bg-gradient-to-r' 
-                : 'border-light-gray text-dark-gray hover:bg-white'}
+        {/* Horizontal Scrolling Container */}
+        <div
+          ref={scrollContainerRef}
+          onScroll={checkScroll}
+          className="flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4"
+          style={{
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none',
+          }}
+        >
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className="flex-shrink-0 w-[380px] snap-start group"
             >
-              {tech}
-            </Button>
-          ))}
-        </div>
-
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project) => (
-            <Card 
-              key={project.id} 
-              className="bg-pure-white border border-light-gray hover:border-pinkish-red/50 transition-all duration-300 hover:shadow-md overflow-hidden"
-            >
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-dark-gray">{project.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-cool-gray mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mt-4">
-                  {project.technologies.map((tech, index) => (
-                    <Badge 
-                      key={index} 
-                      variant="outline" 
-                      className="bg-white text-dark-gray border-light-gray"
-                    >
-                      {tech}
-                    </Badge>
-                  ))}
+              {/* Project Card */}
+              <div className="bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] transition-all duration-300">
+                {/* Image Area */}
+                <div className="relative h-[220px] overflow-hidden bg-gray-200">
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
                 </div>
-              </CardContent>
-              <CardFooter className="flex gap-2">
-                {project.githubUrl && (
-                  <Button 
-                    size="sm" 
-                    variant="outline" 
-                    className="border-light-gray text-dark-gray hover:bg-white"
-                    asChild
-                  >
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="mr-2 h-4 w-4" />
-                      Code
-                    </a>
-                  </Button>
-                )}
-                {project.liveUrl && (
-                  <Button 
-                    size="sm"
-                    className="bg-gradient-to-r from-pinkish-red to-pinkish-red-light hover:opacity-90 text-pure-white"
+
+                {/* Card Content */}
+                <div className="p-6">
+                  {/* Project Name */}
+                  <h3 className="text-xl font-bold text-[#0F172A] mb-3">
+                    {project.name}
+                  </h3>
+
+                  {/* Category Label */}
+                  <p className="text-xs uppercase tracking-wider text-gray-500 mb-3 font-medium">
+                    {project.category}
+                  </p>
+
+                  {/* Description */}
+                  <p className="text-[15px] text-gray-600 leading-relaxed mb-5">
+                    {project.description}
+                  </p>
+
+                  {/* CTA Button */}
+                  <Button
+                    variant="outline"
+                    className="w-full border-2 border-[#E7107E] text-[#E7107E] hover:bg-[#E7107E] hover:text-white rounded-full py-6 font-semibold transition-all duration-200"
                     asChild
                   >
                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Live Demo
+                      See case study
+                      <ArrowRight className="ml-2 w-4 h-4" />
                     </a>
                   </Button>
-                )}
-              </CardFooter>
-            </Card>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
 
-        {/* Show More Button - conditionally rendered if projects are filtered */}
-        {activeFilter !== 'all' && (
-          <div className="text-center mt-12">
-            <Button 
-              variant="outline" 
-              className="bg-gradient-to-r from-pinkish-red to-pinkish-red-light hover:opacity-90 text-white" 
-              onClick={() => setActiveFilter('all')}
-            >
-              Show All Projects
-            </Button>
-          </div>
-        )}
+        {/* Mobile Navigation Dots */}
+        <div className="flex md:hidden justify-center gap-2 mt-6">
+          {projects.map((_, index) => (
+            <div
+              key={index}
+              className="w-2 h-2 rounded-full bg-gray-300"
+            />
+          ))}
+        </div>
       </div>
+
+      <style jsx>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </section>
   );
 };

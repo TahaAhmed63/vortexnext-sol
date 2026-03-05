@@ -7,7 +7,6 @@ import ServicePageLayout from '@/components/layout/ServicePageLayout';
 
 import PricingPackage, { PricingFeature } from '@/components/services/PricingPackage';
 import ServiceFeature from '@/components/services/ServiceFeature';
-import Testimonial from '@/components/services/Testimonial';
 import { UserPlus, Code, Lightbulb, Clock, MessageSquare, CheckCircle } from 'lucide-react';
 import QuoteFormSection from '@/components/sections/QuoteFormSection';
 
@@ -75,22 +74,6 @@ export default function CrmDevelopment() {
         }
     ];
 
-    const testimonials = [
-        {
-            quote: "The custom CRM solution has transformed how we manage customer relationships. It's perfectly tailored to our business needs.",
-            author: "Michael Chen",
-            company: "Global Solutions Inc",
-            rating: 5,
-            image: "https://images.unsplash.com/photo-1531427186611-ecfd6d936e63?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-        },
-        {
-            quote: "Our sales efficiency has increased dramatically since implementing this CRM system. The automation features are game-changing.",
-            author: "Emma Rodriguez",
-            company: "Sales Pro Tech",
-            rating: 5,
-            image: "https://images.unsplash.com/photo-1532980400857-c99fe3968aca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-        }
-    ];
 
     const basicFeatures: PricingFeature[] = [
         { text: "Basic CRM functionality", included: true },
@@ -124,17 +107,13 @@ export default function CrmDevelopment() {
             metaKeywords={metaKeywords}
             heroImage="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
         >
-            <section className="py-20 relative">
-                <div className="absolute inset-0 z-0 overflow-hidden">
-                    <div className="absolute top-0 right-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
-                    <div className="absolute bottom-0 left-0 w-96 h-96 bg-pinkish-red/10 rounded-full blur-[100px] opacity-20"></div>
-                </div>
-                <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 section-fade-in">
+            <section className="py-24 lg:py-32 bg-white relative">
+                <div className="container max-w-7xl mx-auto px-8 lg:px-16 relative z-10 section-fade-in">
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
+                        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#0F172A]">
                             CRM Features & Benefits
                         </h2>
-                        <p className="text-lg text-gray-600">
+                        <p className="text-lg text-gray-600 leading-relaxed">
                             Discover how our CRM solutions can streamline your business operations
                         </p>
                     </div>
@@ -152,39 +131,13 @@ export default function CrmDevelopment() {
                 </div>
             </section>
 
-            <section className="py-20 relative section-fade-in">
-                <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <section className="py-24 lg:py-32 bg-[#F8F9FC] relative section-fade-in">
+                <div className="container max-w-7xl mx-auto px-8 lg:px-16 relative z-10">
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-                            Client Success Stories
-                        </h2>
-                        <p className="text-lg text-gray-600">
-                            See how our CRM solutions have helped businesses grow
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                        {testimonials.map((testimonial, index) => (
-                            <Testimonial
-                                key={index}
-                                quote={testimonial.quote}
-                                author={testimonial.author}
-                                company={testimonial.company}
-                                rating={testimonial.rating}
-                                image={testimonial.image}
-                            />
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            <section className="py-20 relative section-fade-in">
-                <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="text-center max-w-3xl mx-auto mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
+                        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#0F172A]">
                             CRM Solution Packages
                         </h2>
-                        <p className="text-lg text-gray-600">
+                        <p className="text-lg text-gray-600 leading-relaxed">
                             Choose the right CRM package for your business
                         </p>
                     </div>
@@ -211,60 +164,60 @@ export default function CrmDevelopment() {
                 </div>
             </section>
 
-            <section className="py-20 relative section-fade-in">
-                <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <section className="py-24 lg:py-32 bg-white relative section-fade-in">
+                <div className="container max-w-7xl mx-auto px-8 lg:px-16 relative z-10">
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
+                        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#0F172A]">
                             CRM Technologies
                         </h2>
-                        <p className="text-lg text-gray-600">
+                        <p className="text-lg text-gray-600 leading-relaxed">
                             Built with modern technologies for optimal performance
                         </p>
                     </div>
 
-                    <div className="glass-card p-8">
+                    <div className="bg-white rounded-2xl p-8 shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div>
                                 <h3 className="text-xl font-semibold text-gray-600 mb-4">Frontend Technologies</h3>
                                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                                    <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                                    <div className="bg-[#E7107E]/10 p-3 rounded-md text-center">
                                         <span className="text-gray-600">React</span>
                                     </div>
-                                    <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                                    <div className="bg-[#E7107E]/10 p-3 rounded-md text-center">
                                         <span className="text-gray-600">Angular</span>
                                     </div>
-                                    <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                                    <div className="bg-[#E7107E]/10 p-3 rounded-md text-center">
                                         <span className="text-gray-600">Vue.js</span>
                                     </div>
-                                    <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                                    <div className="bg-[#E7107E]/10 p-3 rounded-md text-center">
                                         <span className="text-gray-600">TypeScript</span>
                                     </div>
-                                    <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                                    <div className="bg-[#E7107E]/10 p-3 rounded-md text-center">
                                         <span className="text-gray-600">Redux</span>
                                     </div>
-                                    <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                                    <div className="bg-[#E7107E]/10 p-3 rounded-md text-center">
                                         <span className="text-gray-600">GraphQL</span>
                                     </div>
                                 </div>
-                                
+
                                 <h3 className="text-xl font-semibold text-gray-600 mt-8 mb-4">Backend Technologies</h3>
                                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                                    <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                                    <div className="bg-[#E7107E]/10 p-3 rounded-md text-center">
                                         <span className="text-gray-600">Node.js</span>
                                     </div>
-                                    <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                                    <div className="bg-[#E7107E]/10 p-3 rounded-md text-center">
                                         <span className="text-gray-600">Python</span>
                                     </div>
-                                    <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                                    <div className="bg-[#E7107E]/10 p-3 rounded-md text-center">
                                         <span className="text-gray-600">.NET</span>
                                     </div>
-                                    <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                                    <div className="bg-[#E7107E]/10 p-3 rounded-md text-center">
                                         <span className="text-gray-600">PostgreSQL</span>
                                     </div>
-                                    <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                                    <div className="bg-[#E7107E]/10 p-3 rounded-md text-center">
                                         <span className="text-gray-600">MongoDB</span>
                                     </div>
-                                    <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                                    <div className="bg-[#E7107E]/10 p-3 rounded-md text-center">
                                         <span className="text-gray-600">Redis</span>
                                     </div>
                                 </div>
@@ -282,13 +235,13 @@ export default function CrmDevelopment() {
                 </div>
             </section>
 
-            <section className="py-20 relative section-fade-in">
-                <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <section className="py-24 lg:py-32 bg-[#F8F9FC] relative section-fade-in">
+                <div className="container max-w-7xl mx-auto px-8 lg:px-16 relative z-10">
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
+                        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#0F172A]">
                             Frequently Asked Questions
                         </h2>
-                        <p className="text-lg text-gray-600">
+                        <p className="text-lg text-gray-600 leading-relaxed">
                             Common questions about our CRM development services
                         </p>
                     </div>

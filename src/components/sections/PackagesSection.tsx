@@ -76,73 +76,75 @@ const PackagesSection = () => {
   ];
 
   return (
-    <section id="packages" className="py-20 bg-black relative">
-      {/* Background decorations */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-pinkish-red/10 rounded-full blur-[100px] opacity-20"></div>
-      </div>
-      
-      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="packages" className="py-24 lg:py-32 bg-[#F8F9FC] relative">
+      <div className="container max-w-7xl mx-auto px-8 lg:px-16 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-pinkish-red/10 border border-pinkish-red/30 mb-4">
-            <span className="text-sm font-medium text-pinkish-red">Our Packages</span>
-          </div>
-          <h2 className="section-title text-gradient">
+          <span className="inline-flex items-center px-4 py-2 text-sm font-semibold text-[#E7107E] bg-white rounded-full border border-[#E7107E]/20 mb-6">
+            Our Packages
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#0F172A] mb-6 leading-tight">
             Choose the Perfect Package
           </h2>
-          <p className="section-subtitle">
+          <p className="text-lg text-gray-600 leading-relaxed">
             Select the package that best fits your business needs and budget
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {packages.map((pkg) => (
-            <div 
-              key={pkg.id} 
-              className={`glass-card rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl relative border ${
-                pkg.popular 
-                  ? 'border-pinkish-red' 
-                  : 'border-pinkish-red/20'
+            <div
+              key={pkg.id}
+              className={`bg-white rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 relative shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] border ${
+                pkg.popular
+                  ? 'border-[#E7107E]'
+                  : 'border-gray-200'
               }`}
             >
               {pkg.popular && (
-                <div className="absolute top-0 right-0">
-                  <Badge className="rounded-bl-lg rounded-tr-lg px-3 py-1.5 bg-pinkish-red text-white">
-                    <Sparkles className="w-3.5 h-3.5 mr-1" />
-                    Popular
-                  </Badge>
-                </div>
-              )}
-              
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-white mb-2">{pkg.name}</h3>
-                <p className="text-gray-300 mb-5 h-12">{pkg.description}</p>
-                
-                <div className="mb-6">
-                  <div className="flex items-end">
-                    <span className="text-4xl font-bold text-white">{pkg.price}</span>
-                    <span className="text-gray-400 ml-2 mb-1">/{pkg.period}</span>
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-[#E7107E] text-white px-6 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span className="text-sm font-semibold uppercase tracking-wide">Popular</span>
                   </div>
                 </div>
-                
+              )}
+
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-[#0F172A] mb-2">{pkg.name}</h3>
+                <p className="text-gray-600 mb-5 h-12 leading-relaxed text-sm">{pkg.description}</p>
+
+                <div className="mb-6">
+                  <div className="flex items-end">
+                    <span className="text-4xl font-bold text-[#E7107E]">{pkg.price}</span>
+                    <span className="text-gray-500 ml-2 mb-1">/{pkg.period}</span>
+                  </div>
+                </div>
+
                 <Button
-                  variant={pkg.popular ? 'default' : 'outline'}
-                  className="w-full mb-8"
+                  className={`w-full mb-8 py-6 font-semibold text-sm uppercase tracking-wide rounded-full transition-all duration-200 ${
+                    pkg.popular
+                      ? 'bg-[#E7107E] hover:bg-[#c00e6b] text-white'
+                      : 'bg-white border-2 border-[#E7107E] text-[#E7107E] hover:bg-[#E7107E] hover:text-white'
+                  }`}
+                  onClick={() => document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Get Started <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
-                
+
                 <div className="space-y-4">
-                  <h4 className="text-lg font-medium text-white">Features included:</h4>
+                  <h4 className="text-base font-semibold text-[#0F172A]">Features included:</h4>
                   {pkg.features.map((feature, index) => (
-                    <div key={index} className="flex items-center">
+                    <div key={index} className="flex items-start gap-3">
                       {feature.included ? (
-                        <Check className="w-5 h-5 text-pinkish-red mr-3 flex-shrink-0" />
+                        <div className="rounded-full p-0.5 bg-[#E7107E] mt-0.5 flex-shrink-0">
+                          <Check className="w-3 h-3 text-white" />
+                        </div>
                       ) : (
-                        <X className="w-5 h-5 text-gray-500 mr-3 flex-shrink-0" />
+                        <div className="rounded-full p-0.5 bg-gray-200 mt-0.5 flex-shrink-0">
+                          <X className="w-3 h-3 text-gray-400" />
+                        </div>
                       )}
-                      <span className={`${feature.included ? 'text-white' : 'text-gray-500'}`}>
+                      <span className={`text-sm ${feature.included ? 'text-gray-700' : 'text-gray-400 line-through'}`}>
                         {feature.title}
                       </span>
                     </div>
@@ -152,13 +154,17 @@ const PackagesSection = () => {
             </div>
           ))}
         </div>
-        
-        <div className="mt-12 text-center">
-          <p className="text-gray-300 mb-6">
+
+        <div className="mt-16 text-center">
+          <p className="text-gray-600 mb-6 text-lg leading-relaxed">
             Need a custom solution? We offer tailored packages to meet your specific requirements
           </p>
-          <Button onClick={() => document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' })}>
+          <Button
+            className="bg-[#E7107E] hover:bg-[#c00e6b] text-white font-semibold text-sm uppercase px-10 py-7 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl"
+            onClick={() => document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             Request Custom Quote
+            <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
       </div>

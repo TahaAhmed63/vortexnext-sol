@@ -2,14 +2,15 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/sections/HeroSection";
-import ServicesSection from "@/components/sections/ServicesSection";
-import QuoteFormSection from "@/components/sections/QuoteFormSection";
-import CaseStudiesSection from "@/components/sections/CaseStudiesSection";
-import TestimonialsSection from "@/components/sections/TestimonialsSection";
-import BlogSection from "@/components/sections/BlogSection";
-import ContactSection from "@/components/sections/ContactSection";
+import BenefitsSection from "@/components/sections/BenefitsSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
-// import { PackagesSection } from "@/components/sections/PackagesSection";
+import HowItWorksSection from "@/components/sections/HowItWorksSection";
+import ServicesSection from "@/components/sections/ServicesSection";
+import TechStackSection from "@/components/sections/TechStackSection";
+import CaseStudiesSection from "@/components/sections/CaseStudiesSection";
+import FAQSection from "@/components/sections/FAQSection";
+import FinalCTASection from "@/components/sections/FinalCTASection";
+import QuoteFormSection from "@/components/sections/QuoteFormSection";
 import { useEffect } from "react";
 
 
@@ -65,19 +66,20 @@ export default function Home() {
   }, []);
   return (
     <div className="min-h-screen flex flex-col">
-    <Header />
-    <main className="flex-grow">
-      <HeroSection />
-      <ServicesSection />
-      <ProjectsSection />
-      {/* <PackagesSection /> */}
-      <CaseStudiesSection />
-      <TestimonialsSection />
-      <QuoteFormSection />
-      <BlogSection />
-      <ContactSection />
-    </main>
-    <Footer />
-  </div>
+      <Header />
+      <main className="flex-grow">
+        <HeroSection />
+        <BenefitsSection />
+        <ProjectsSection />
+        <HowItWorksSection />
+        <ServicesSection />
+        <TechStackSection />
+        <CaseStudiesSection />
+        <FAQSection />
+        <QuoteFormSection />
+        <FinalCTASection />
+      </main>
+      <Footer />
+    </div>
   );
 }

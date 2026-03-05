@@ -4,7 +4,6 @@ import React, { useEffect } from 'react';
 import ServicePageLayout from '@/components/layout/ServicePageLayout';
 import PricingPackage, { PricingFeature } from '@/components/services/PricingPackage';
 import ServiceFeature from '@/components/services/ServiceFeature';
-import Testimonial from '@/components/services/Testimonial';
 import { Megaphone, BarChart2, Target, Users, Share2, Smartphone } from 'lucide-react';
 import QuoteFormSection from '@/components/sections/QuoteFormSection';
 
@@ -100,22 +99,6 @@ const DigitalMarketing = () => {
     { text: "Remarketing campaigns", included: true }
   ];
 
-  const testimonials = [
-    {
-      quote: "The digital marketing strategy developed by this team transformed our online presence. Our e-commerce sales increased by 68% in just three months!",
-      author: "Jessica Miller",
-      company: "Urban Boutique",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-    },
-    {
-      quote: "Their PPC campaign management is exceptional. They reduced our cost per lead by 40% while simultaneously increasing our conversion rate.",
-      author: "David Chen",
-      company: "TechSolutions Inc.",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-    }
-  ];
 
   const metaKeywords = "Digital Marketing, SEO, Social Media Marketing, PPC Advertising, Content Marketing, Mobile Marketing, Analytics, Audience Targeting, Online Marketing";
 
@@ -127,17 +110,13 @@ const DigitalMarketing = () => {
       heroImage="https://images.unsplash.com/photo-1557838923-2985c318be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2342&q=80"
     >
       {/* Features Section */}
-      <section className="py-20 relative">
-        <div className="absolute inset-0 z-0 overflow-hidden">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-pinkish-red/10 rounded-full blur-[100px] opacity-20"></div>
-        </div>
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 section-fade-in">
+      <section className="py-24 lg:py-32 bg-white relative">
+        <div className="container max-w-7xl mx-auto px-8 lg:px-16 relative z-10 section-fade-in">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#0F172A]">
               Our Digital Marketing Services
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 leading-relaxed">
               Strategic marketing solutions to boost your online visibility and drive conversions
             </p>
           </div>
@@ -156,41 +135,14 @@ const DigitalMarketing = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 relative section-fade-in">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-              What Our Clients Say
-            </h2>
-            <p className="text-lg text-gray-600">
-              Hear from businesses that have transformed their digital presence
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <Testimonial
-                key={index}
-                quote={testimonial.quote}
-                author={testimonial.author}
-                company={testimonial.company}
-                rating={testimonial.rating}
-                image={testimonial.image}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Pricing Section */}
-      <section className="py-20 relative section-fade-in">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="py-24 lg:py-32 bg-[#F8F9FC] relative section-fade-in">
+        <div className="container max-w-7xl mx-auto px-8 lg:px-16 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#0F172A]">
               Digital Marketing Packages
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 leading-relaxed">
               Choose the marketing services that align with your business goals
             </p>
           </div>
@@ -218,76 +170,76 @@ const DigitalMarketing = () => {
       </section>
 
       {/* Case Studies Section */}
-      <section className="py-20 relative section-fade-in">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="py-24 lg:py-32 bg-white relative section-fade-in">
+        <div className="container max-w-7xl mx-auto px-8 lg:px-16 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#0F172A]">
               Marketing Success Stories
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 leading-relaxed">
               Real results for businesses like yours
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="glass-card p-8">
+            <div className="bg-white rounded-2xl p-8 shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
               <div className="flex items-center mb-4">
-                <div className="w-16 h-16 rounded-full bg-pinkish-red/20 flex items-center justify-center mr-4">
-                  <Megaphone className="w-8 h-8 text-pinkish-red" />
+                <div className="w-16 h-16 rounded-full bg-[#E7107E]/20 flex items-center justify-center mr-4">
+                  <Megaphone className="w-8 h-8 text-[#E7107E]" />
                 </div>
-                <h3 className="text-2xl font-semibold ">Fashion Retailer</h3>
+                <h3 className="text-2xl font-semibold">Fashion Retailer</h3>
               </div>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600 mb-4 leading-relaxed">
                 A fashion boutique sought to increase online sales and build brand awareness through social media.
               </p>
               <div className="space-y-3 mb-6">
                 <div className="flex items-center">
-                  <div className="w-12 h-8 flex items-center justify-center text-pinkish-red font-bold">78%</div>
+                  <div className="w-12 h-8 flex items-center justify-center text-[#E7107E] font-bold">78%</div>
                   <span className="text-gray-600">Increase in social media engagement</span>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-12 h-8 flex items-center justify-center text-pinkish-red font-bold">43%</div>
+                  <div className="w-12 h-8 flex items-center justify-center text-[#E7107E] font-bold">43%</div>
                   <span className="text-gray-600">Growth in online store traffic</span>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-12 h-8 flex items-center justify-center text-pinkish-red font-bold">31%</div>
+                  <div className="w-12 h-8 flex items-center justify-center text-[#E7107E] font-bold">31%</div>
                   <span className="text-gray-600">Increase in conversion rate</span>
                 </div>
               </div>
-              <img 
-                src="https://images.unsplash.com/photo-1556741533-6e6a62bd8b49?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" 
-                alt="Fashion social media marketing" 
+              <img
+                src="https://images.unsplash.com/photo-1556741533-6e6a62bd8b49?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
+                alt="Fashion social media marketing"
                 className="w-full h-auto rounded-lg"
               />
             </div>
 
-            <div className="glass-card p-8">
+            <div className="bg-white rounded-2xl p-8 shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
               <div className="flex items-center mb-4">
-                <div className="w-16 h-16 rounded-full bg-pinkish-red/20 flex items-center justify-center mr-4">
-                  <Target className="w-8 h-8 text-pinkish-red" />
+                <div className="w-16 h-16 rounded-full bg-[#E7107E]/20 flex items-center justify-center mr-4">
+                  <Target className="w-8 h-8 text-[#E7107E]" />
                 </div>
-                <h3 className="text-2xl font-semibold ">SaaS Company</h3>
+                <h3 className="text-2xl font-semibold">SaaS Company</h3>
               </div>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600 mb-4 leading-relaxed">
                 A software company needed to generate qualified leads for their B2B service through Google Ads.
               </p>
               <div className="space-y-3 mb-6">
                 <div className="flex items-center">
-                  <div className="w-12 h-8 flex items-center justify-center text-pinkish-red font-bold">125%</div>
+                  <div className="w-12 h-8 flex items-center justify-center text-[#E7107E] font-bold">125%</div>
                   <span className="text-gray-600">Increase in qualified leads</span>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-12 h-8 flex items-center justify-center text-pinkish-red font-bold">45%</div>
+                  <div className="w-12 h-8 flex items-center justify-center text-[#E7107E] font-bold">45%</div>
                   <span className="text-gray-600">Reduction in cost per acquisition</span>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-12 h-8 flex items-center justify-center text-pinkish-red font-bold">3.2x</div>
+                  <div className="w-12 h-8 flex items-center justify-center text-[#E7107E] font-bold">3.2x</div>
                   <span className="text-gray-600">Return on ad spend</span>
                 </div>
               </div>
-              <img 
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2426&q=80" 
-                alt="SaaS marketing dashboard" 
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2426&q=80"
+                alt="SaaS marketing dashboard"
                 className="w-full h-auto rounded-lg"
               />
             </div>

@@ -1,6 +1,5 @@
-
-import React, { useRef, useState } from 'react';
-import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react';
+import React, { useRef } from 'react';
+import { ArrowUpRight, TrendingUp } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
@@ -18,169 +17,143 @@ interface CaseStudy {
 }
 
 const CaseStudiesSection = () => {
-  const [activeSlide, setActiveSlide] = useState(0);
-  const sliderRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   const caseStudies: CaseStudy[] = [
     {
       id: 1,
-      title: "AI-Powered Customer Segmentation",
-      client: "RetailGiant Inc.",
-      description: "Implemented an advanced AI solution that analyzed customer behavior and purchase patterns to create highly targeted marketing campaigns.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1500&q=80",
-      category: "AI Solutions",
+      title: "E-Commerce Platform",
+      client: "Bliss n Bless",
+      description: "Built a premium perfume e-commerce platform with automated inventory management and AI-powered recommendations, resulting in significant sales growth.",
+      image: "/lovable-uploads/project1.png",
+      category: "E-Commerce",
       results: [
-        { label: "Conversion Rate", value: "+43%" },
-        { label: "Customer Retention", value: "+28%" },
-        { label: "ROI", value: "312%" }
+        { label: "Sales Growth", value: "+156%" },
+        { label: "Conversion", value: "+89%" },
+        { label: "Time Saved", value: "30h/wk" }
       ]
     },
     {
       id: 2,
-      title: "End-to-End E-commerce Platform",
-      client: "FashionForward",
-      description: "Developed a comprehensive e-commerce platform with integrated CRM, inventory management, and AI-driven product recommendations.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1500&q=80",
-      category: "Web Development",
+      title: "Business Automation",
+      client: "Concrete Pro",
+      description: "Automated quote generation and project tracking system that streamlined operations and reduced administrative overhead significantly.",
+      image: "/lovable-uploads/image (55).png",
+      category: "Construction",
       results: [
-        { label: "Sales Growth", value: "+87%" },
-        { label: "User Engagement", value: "+64%" },
-        { label: "Cart Abandonment", value: "-35%" }
+        { label: "Admin Time", value: "-65%" },
+        { label: "Response Time", value: "-80%" },
+        { label: "Efficiency", value: "+142%" }
       ]
     },
     {
       id: 3,
-      title: "Mobile Banking App Overhaul",
-      client: "FinTech Solutions",
-      description: "Redesigned and rebuilt a mobile banking application with enhanced security, improved user experience, and new feature integration.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1500&q=80",
-      category: "Mobile Development",
+      title: "Travel Automation",
+      client: "TravelSmooth Pakistan",
+      description: "Complete travel management platform with automated bookings, payments, and itinerary generation, scaling operations efficiently.",
+      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1500&q=80",
+      category: "Travel Tech",
       results: [
-        { label: "User Adoption", value: "+125%" },
-        { label: "Transaction Volume", value: "+78%" },
-        { label: "Support Tickets", value: "-41%" }
+        { label: "Automation", value: "80%" },
+        { label: "Speed", value: "-92%" },
+        { label: "Bookings", value: "10K+/mo" }
+      ]
+    },
+    {
+      id: 4,
+      title: "Automotive Platform",
+      client: "Haval Society",
+      description: "Premium vehicle sales platform with automated inventory, virtual showrooms, and CRM integration for streamlined operations.",
+      image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1500&q=80",
+      category: "Automotive",
+      results: [
+        { label: "Conversions", value: "+92%" },
+        { label: "Response", value: "Minutes" },
+        { label: "Sales Cycle", value: "-58%" }
       ]
     }
   ];
 
-  const nextSlide = () => {
-    setActiveSlide((prev) => (prev === caseStudies.length - 1 ? 0 : prev + 1));
-  };
-
-  const prevSlide = () => {
-    setActiveSlide((prev) => (prev === 0 ? caseStudies.length - 1 : prev - 1));
-  };
-
   return (
-    <section id="case-studies" className="py-20  relative">
-      {/* Background decorations */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-pinkish-red/10 rounded-full blur-[100px] opacity-20"></div>
-      </div>
+    <section id="case-studies" className="py-24 lg:py-32 bg-[#0F172A] relative overflow-hidden">
+      {/* Dark background with subtle accents */}
+      <div className="absolute top-20 left-20 w-[500px] h-[500px] bg-[#E7107E]/10 rounded-full blur-[120px]"></div>
+      <div className="absolute bottom-20 right-20 w-[400px] h-[400px] bg-[#0FA4EA]/10 rounded-full blur-[120px]"></div>
 
-      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-pinkish-red/10 border border-pinkish-red/30 mb-4">
-            <span className="text-sm font-medium text-pinkish-red">Success Stories</span>
-          </div>
-          <h2 className="mt-3 text-3xl md:text-4xl font-bold text-dark-gray">
-            Our Work  <span className='text-pinkish-red'> Speaks For Itself</span>
+      <div className="container max-w-7xl mx-auto px-8 lg:px-16 relative z-10">
+        <div className="text-center max-w-4xl mx-auto mb-20">
+          <span className="inline-flex items-center px-4 py-2 text-sm font-semibold text-[#E7107E] bg-[#E7107E]/10 rounded-full border border-[#E7107E]/20 mb-8">
+            Success Stories
+          </span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8">
+            Case Studies
           </h2>
-          <p className="section-subtitle">
-            Explore how we've helped businesses achieve remarkable results with our custom solutions
+          <p className="text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
+            See how we've helped businesses achieve their goals with custom software solutions
           </p>
         </div>
 
-        <div className="relative">
-          {/* Case Study Slider */}
-          <div 
-            ref={sliderRef}
-            className="overflow-hidden rounded-2xl shadow-xl glass-card border border-pinkish-red/20"
-          >
-            <div 
-              className="flex transition-transform duration-500 ease-out"
-              style={{ transform: `translateX(-${activeSlide * 100}%)` }}
+        {/* Grid layout for case studies */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {caseStudies.map((study, index) => (
+            <div
+              key={study.id}
+              className="group cursor-pointer"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {caseStudies.map((study) => (
-                <div key={study.id} className="w-full flex-shrink-0">
-                  <div className="grid grid-cols-1 lg:grid-cols-2">
-                    {/* Image Side */}
-                    <div className="relative h-64 lg:h-auto">
-                      <img 
-                        src={study.image} 
-                        alt={study.title} 
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute bottom-4 left-4">
-                        <Badge className="bg-pinkish-red hover:bg-pinkish-red/90 ">
-                          {study.category}
-                        </Badge>
-                      </div>
-                    </div>
-                    
-                    {/* Content Side */}
-                    <div className="p-6 lg:p-10 flex flex-col">
-                      <div className="mb-2 text-sm text-gray-600">Client: {study.client}</div>
-                      <h3 className="text-2xl font-bold  mb-4">{study.title}</h3>
-                      <p className="text-gray-600 mb-6 flex-grow">{study.description}</p>
-                      
-                      <div className="grid grid-cols-3 gap-4 mb-6">
-                        {study.results.map((result, index) => (
-                          <div key={index} className="text-center p-3 bg-pinkish-red/30 rounded-lg border border-pinkish-red/20">
-                            <p className="text-gray-600 text-xs">{result.label}</p>
-                            <p className="text-pinkish-red font-bold text-xl">{result.value}</p>
-                          </div>
-                        ))}
-                      </div>
-                      
-                      <Button
-                        variant="outline"
-                        className="self-start"
-                      >
-                        View Full Case Study <ExternalLink className="ml-2 h-4 w-4" />
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          
-          {/* Navigation Controls */}
-          <div className="flex justify-between mt-8">
-            <div className="flex space-x-1">
-              {caseStudies.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveSlide(index)}
-                  className={`w-10 h-1.5 rounded-full transition-all ${
-                    index === activeSlide ? 'bg-pinkish-red' : 'bg-gray-700'
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
+              {/* Large image */}
+              <div className="relative h-[350px] lg:h-[400px] overflow-hidden rounded-2xl mb-6 bg-gray-800">
+                <img
+                  src={study.image}
+                  alt={study.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-              ))}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+
+                {/* Category badge */}
+                <Badge className="absolute top-4 left-4 bg-white/90 text-[#0F172A] border-0 backdrop-blur-sm font-semibold">
+                  {study.category}
+                </Badge>
+
+                {/* Overlay content */}
+                <div className="absolute bottom-6 left-6 right-6">
+                  <p className="text-[#E7107E] font-semibold mb-2">{study.client}</p>
+                  <h3 className="text-2xl lg:text-3xl font-bold text-white mb-2">
+                    {study.title}
+                  </h3>
+                </div>
+              </div>
+
+              {/* Description and results */}
+              <div className="space-y-6">
+                <p className="text-gray-400 leading-relaxed">
+                  {study.description}
+                </p>
+
+                {/* Results */}
+                <div className="grid grid-cols-3 gap-4">
+                  {study.results.map((result, idx) => (
+                    <div key={idx}>
+                      <p className="text-xs text-gray-500 mb-1">{result.label}</p>
+                      <p className="text-2xl font-bold text-[#E7107E]">{result.value}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
-            
-            <div className="flex space-x-2">
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={prevSlide}
-                className="rounded-full h-10 w-10"
-              >
-                <ArrowLeft className="h-5 w-5" />
-              </Button>
-              <Button
-                variant="default"
-                size="icon"
-                onClick={nextSlide}
-                className="rounded-full h-10 w-10"
-              >
-                <ArrowRight className="h-5 w-5" />
-              </Button>
-            </div>
-          </div>
+          ))}
+        </div>
+
+        {/* CTA */}
+        <div className="text-center mt-20">
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-2 border-white/30 text-white hover:bg-white/10 font-semibold px-10 py-7 rounded-full transition-all duration-200 backdrop-blur-sm"
+          >
+            View All Projects
+            <ArrowUpRight className="ml-2 w-5 h-5" />
+          </Button>
         </div>
       </div>
     </section>

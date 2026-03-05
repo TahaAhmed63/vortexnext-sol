@@ -116,17 +116,13 @@ const VideoAnimation = () => {
       heroImage="https://images.unsplash.com/photo-1574717024453-354a08aab7c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     >
       {/* Features Section */}
-      <section className="py-20 relative">
-        <div className="absolute inset-0 z-0 overflow-hidden">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-pinkish-red/10 rounded-full blur-[100px] opacity-20"></div>
-        </div>
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 section-fade-in">
+      <section className="py-24 lg:py-32 bg-white relative">
+        <div className="container max-w-7xl mx-auto px-8 lg:px-16 relative z-10 section-fade-in">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#0F172A]">
               Our Video Animation Services
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 leading-relaxed">
               Bring your ideas to life with engaging and informative animated videos that captivate your audience.
             </p>
           </div>
@@ -145,21 +141,21 @@ const VideoAnimation = () => {
       </section>
 
       {/* Package Section */}
-      <section className="py-20 /90 relative section-fade-in">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="py-24 lg:py-32 bg-[#F8F9FC] relative section-fade-in">
+        <div className="container max-w-7xl mx-auto px-8 lg:px-16 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#0F172A]">
               Explainer Video Package
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 leading-relaxed">
               Professional 60-second animated video to explain your product or service effectively.
             </p>
           </div>
 
-          <div className="glass-card p-8 md:p-12 max-w-4xl mx-auto">
+          <div className="bg-white rounded-2xl p-8 shadow-[0_8px_30px_rgba(0,0,0,0.08)] md:p-12 max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="w-full md:w-1/2">
-                <div className="aspect-video /50 rounded-xl overflow-hidden border border-pinkish-red/30 relative">
+                <div className="aspect-video rounded-xl overflow-hidden border border-[#E7107E]/30 relative">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <video 
                       className="w-full h-full object-cover"
@@ -174,32 +170,32 @@ const VideoAnimation = () => {
               </div>
               
               <div className="w-full md:w-1/2">
-                <h3 className="text-2xl font-semibold mb-3 text-white">60-Second Explainer Video</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-2xl font-semibold mb-3 text-[#0F172A]">60-Second Explainer Video</h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
                   A professionally crafted animated video that clearly explains your product or service to your target audience, enhancing engagement and conversion.
                 </p>
-                
+
                 <div className="space-y-3 mb-6">
                   <div className="flex items-start">
-                    <Play className="w-5 h-5 text-pinkish-red mr-2 mt-1" />
+                    <Play className="w-5 h-5 text-[#E7107E] mr-2 mt-1" />
                     <span className="text-gray-600">Custom script and storyboard tailored to your needs</span>
                   </div>
                   <div className="flex items-start">
-                    <Play className="w-5 h-5 text-pinkish-red mr-2 mt-1" />
+                    <Play className="w-5 h-5 text-[#E7107E] mr-2 mt-1" />
                     <span className="text-gray-600">Professional voiceover to enhance your message</span>
                   </div>
                   <div className="flex items-start">
-                    <Play className="w-5 h-5 text-pinkish-red mr-2 mt-1" />
+                    <Play className="w-5 h-5 text-[#E7107E] mr-2 mt-1" />
                     <span className="text-gray-600">Music and sound effects that elevate the viewing experience</span>
                   </div>
                   <div className="flex items-start">
-                    <Play className="w-5 h-5 text-pinkish-red mr-2 mt-1" />
+                    <Play className="w-5 h-5 text-[#E7107E] mr-2 mt-1" />
                     <span className="text-gray-600">Two rounds of revisions to ensure satisfaction</span>
                   </div>
                 </div>
-                
+
                 <div className="mb-6">
-                  <div className="text-3xl font-bold text-gradient">$1,200 USD</div>
+                  <div className="text-3xl font-bold text-[#0F172A]">$1,200 USD</div>
                   <div className="text-gray-400 text-sm">One-time payment for a high-quality animated video</div>
                 </div>
                 
@@ -215,22 +211,22 @@ const VideoAnimation = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 relative section-fade-in">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="py-24 lg:py-32 bg-white relative section-fade-in">
+        <div className="container max-w-7xl mx-auto px-8 lg:px-16 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#0F172A]">
               Our Animation Process
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 leading-relaxed">
               A structured approach to creating effective animated videos that resonate with your audience.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {process.map((step, index) => (
-              <div key={index} className="glass-card p-6">
+              <div key={index} className="bg-white rounded-2xl p-8 shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
                 <div className="flex items-center mb-4">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-pinkish-red text-white font-bold mr-4">
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#E7107E] text-white font-bold mr-4">
                     {index + 1}
                   </div>
                   <h3 className="text-xl font-semibold text-gray-600">{step.title}</h3>
