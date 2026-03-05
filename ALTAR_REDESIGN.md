@@ -3,7 +3,7 @@
 ## Overview
 Complete redesign based on Altar.io's premium software company aesthetic. The site now features a sophisticated dark theme with vibrant accent colors, large typography, and generous spacing.
 
----
+--- 
 
 ## Design System
 
