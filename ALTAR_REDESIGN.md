@@ -6,7 +6,7 @@ Complete redesign based on Altar.io's premium software company aesthetic. The si
 --- 
 
 ## Design System
-
+ 
 ### Color Palette (Altar.io inspired)
 ```css
 Primary Colors:
