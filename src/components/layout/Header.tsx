@@ -83,7 +83,7 @@ const Header = () => {
             <img
               src="/vortexnewlogo-Photoroom.png"
               alt="Vortex Solution Logo"
-              className="h-auto w-[150px]"
+              className="h-auto w-[150px]" 
             />
           </Link>
 
